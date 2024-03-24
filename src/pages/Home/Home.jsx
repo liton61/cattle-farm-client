@@ -1,5 +1,6 @@
 import AboutUs from "../../components/AboutUs/AboutUs";
 import Banner from "../../components/Banner/Banner";
+import Brand from "../../components/Brand/Brand";
 import Gallery from "../../components/Gallery/Gallery";
 import Product from "../../components/Product/Product";
 import Quote from "../../components/Quote/Quote";
@@ -22,6 +23,7 @@ const Home = () => {
             <Quote></Quote>
             <Gallery></Gallery>
             <Video></Video>
+            <Brand></Brand>
         </div>
     );
 };
