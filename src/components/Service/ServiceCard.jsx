@@ -8,7 +8,7 @@ const ServiceCard = ({ service }) => {
             <img className="w-52 mx-auto" src={image} alt="" />
             <h2 className="text-2xl font-semibold text-center pt-5">{title}</h2>
             <p className="text-center py-3">{description}</p>
-            <div className="card-actions justify-center">
+            <div className="card-actions justify-center pb-3">
                 <button className=""><i className="fa-solid fa-arrow-right text-4xl font-extrabold text-green-900"></i></button>
             </div>
         </div>

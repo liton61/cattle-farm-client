@@ -1,8 +1,9 @@
 import { NavLink } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-green-900 text-yellow-200">
+        <div className="navbar bg-yellow-200 text-green-900">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -29,7 +30,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div>
-                    <h3 className='text-2xl font-bold'>CattleFarm</h3>
+                    <img className='w-28' src={logo} alt="" />
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">

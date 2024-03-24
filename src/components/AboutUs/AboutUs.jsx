@@ -15,13 +15,13 @@ const AboutUs = () => {
                 </div>
                 <div>
                     <div>
-                        <h5>About Us</h5>
+                        <h5 className='font-bold text-green-900'>About Us</h5>
                         <h1 className='text-5xl font-bold'>KNOW ABOUT OUR FARM & HISTORY</h1>
                         <p className='text-justify py-5'>We have been working in this industry for more than 30 years with trust and honesty. All hands must be on deck if we are to achieve our goal of improving global nutrition.</p>
                     </div>
                     <div className='grid grid-cols-1 lg:grid-cols-2'>
                         <div>
-                            <h3 className='text-xl font-medium'>OUR MISSION</h3>
+                            <h3 className='text-xl font-bold'>OUR MISSION</h3>
                             <ul className='py-3'>
                                 <li><i className="fa-solid fa-check text-green-500"></i> High-quality work</li>
                                 <li><i className="fa-solid fa-check text-green-500"></i> Straightforward pricing</li>

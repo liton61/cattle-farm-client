@@ -4,7 +4,7 @@
 const Video = () => {
     return (
         <div className="lg:w-3/4 mx-auto lg:px-0 px-5">
-            <p className="text-center font-medium text-green-900">Intro Video</p>
+            <p className="text-center font-bold text-green-900">Intro Video</p>
             <h1 className="text-5xl font-bold text-center text-green-900 pb-10">READY TO EXPERIENCE &
                 <br /> WORK DIFFERENCE</h1>
             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5">
