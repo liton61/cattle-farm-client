@@ -1,5 +1,6 @@
 import AboutUs from "../../components/AboutUs/AboutUs";
 import Banner from "../../components/Banner/Banner";
+import Booking from "../../components/Booking/Booking";
 import Brand from "../../components/Brand/Brand";
 import Gallery from "../../components/Gallery/Gallery";
 import Product from "../../components/Product/Product";
@@ -24,6 +25,7 @@ const Home = () => {
             <Gallery></Gallery>
             <Video></Video>
             <Brand></Brand>
+            <Booking></Booking>
         </div>
     );
 };
