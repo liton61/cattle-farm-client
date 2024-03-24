@@ -1,10 +1,12 @@
 import AboutUs from "../../components/AboutUs/AboutUs";
 import Banner from "../../components/Banner/Banner";
+import Gallery from "../../components/Gallery/Gallery";
 import Product from "../../components/Product/Product";
 import Quote from "../../components/Quote/Quote";
 import Search from "../../components/Search/Search";
 import Service from "../../components/Service/Service";
 import Slider from "../../components/Slider/Slider";
+import Video from "../../components/Video/Video";
 
 
 
@@ -18,6 +20,8 @@ const Home = () => {
             <Product></Product>
             <Service></Service>
             <Quote></Quote>
+            <Gallery></Gallery>
+            <Video></Video>
         </div>
     );
 };
