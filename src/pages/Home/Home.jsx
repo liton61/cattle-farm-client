@@ -8,6 +8,7 @@ import Quote from "../../components/Quote/Quote";
 import Search from "../../components/Search/Search";
 import Service from "../../components/Service/Service";
 import Slider from "../../components/Slider/Slider";
+import Team from "../../components/Team/Team";
 import Video from "../../components/Video/Video";
 
 
@@ -25,6 +26,7 @@ const Home = () => {
             <Gallery></Gallery>
             <Video></Video>
             <Brand></Brand>
+            <Team></Team>
             <Booking></Booking>
         </div>
     );
