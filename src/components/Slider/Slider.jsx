@@ -13,7 +13,7 @@ import banner2 from '../../assets/cow (2).jpg';
 
 const Slider = () => {
     return (
-        <div className='lg:w-3/4 mx-auto py-16 lg:px-0 px-5'>
+        <div className='lg:w-3/4 mx-auto py-6 lg:px-0 px-5'>
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
