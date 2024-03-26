@@ -1,0 +1,17 @@
+[
+    {
+        "_id": "1",
+        "image": "https://i.ibb.co/ZgCrmYR/cow-5.jpg",
+        "title": "Cow"
+    },
+    {
+        "_id": "2",
+        "image": "https://i.ibb.co/VjbtQkv/cow-2.jpg",
+        "title": "Goat"
+    },
+    {
+        "_id": "3",
+        "image": " https://i.ibb.co/nLMyXw1/cow-3.jpg",
+        "title": "Lamp"
+    }
+]

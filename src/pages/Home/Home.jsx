@@ -2,6 +2,7 @@ import AboutUs from "../../components/AboutUs/AboutUs";
 import Banner from "../../components/Banner/Banner";
 import Booking from "../../components/Booking/Booking";
 import Brand from "../../components/Brand/Brand";
+import Cattle from "../../components/Cattle/Cattle";
 import Gallery from "../../components/Gallery/Gallery";
 import Product from "../../components/Product/Product";
 import Quote from "../../components/Quote/Quote";
@@ -19,6 +20,7 @@ const Home = () => {
             <Banner></Banner>
             <Slider></Slider>
             <Search></Search>
+            <Cattle></Cattle>
             <AboutUs></AboutUs>
             <Product></Product>
             <Service></Service>
