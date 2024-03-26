@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBYENNENst6fS2-HnzGtrfFtNkUWQ7Q__I",
-  authDomain: "cattle-farm-51624.firebaseapp.com",
-  projectId: "cattle-farm-51624",
-  storageBucket: "cattle-farm-51624.appspot.com",
-  messagingSenderId: "997537726440",
-  appId: "1:997537726440:web:122e2a200aff892d82ee5d"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase
