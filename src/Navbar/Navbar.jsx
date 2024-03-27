@@ -24,22 +24,46 @@ const Navbar = () => {
 
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-green-900 text-yellow-200 rounded w-52">
-                        <li><NavLink
+                        <a className='border-b border-yellow-200 mb-2 pb-2'><NavLink
                             to="/"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
                             Home
-                        </NavLink></li>
-                        <li><NavLink
+                        </NavLink></a>
+                        <a className='border-b border-yellow-200 mb-2 pb-2'><NavLink
                             to="/about"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
                             About
-                        </NavLink></li>
+                        </NavLink></a>
+                        <a className='border-b border-yellow-200 mb-2 pb-2'><NavLink
+                            to="/about"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            Contact
+                        </NavLink></a>
+                        <a className='border-b border-yellow-200 mb-2 pb-2'><NavLink
+                            to="/about"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            Shope
+                        </NavLink></a>
+                        <a><NavLink
+                            to="/about"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            Blog
+                        </NavLink></a>
                     </ul>
                 </div>
                 <div>
@@ -48,22 +72,22 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li className='px-2 font-medium'><NavLink
+                    <a className='px-2 font-medium'><NavLink
                         to="/"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "active" : ""
+                            isPending ? "pending" : isActive ? "bg-green-900 text-yellow-200 px-4 py-2 rounded" : ""
                         }
                     >
                         Home
-                    </NavLink></li>
-                    <li className='px-2 font-medium'><NavLink
+                    </NavLink></a>
+                    <a className='px-2 font-medium'><NavLink
                         to="/about"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "active" : ""
+                            isPending ? "pending" : isActive ? "bg-green-900 text-yellow-200 px-4 py-2 rounded" : ""
                         }
                     >
                         About
-                    </NavLink></li>
+                    </NavLink></a>
                 </ul>
             </div>
             <div className="navbar-end">
