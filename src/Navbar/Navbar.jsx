@@ -81,6 +81,22 @@ const Navbar = () => {
                         Home
                     </NavLink></a>
                     <a className='px-2 font-medium'><NavLink
+                        to="/cattle"
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "bg-green-900 text-yellow-200 px-4 py-2 rounded" : ""
+                        }
+                    >
+                        Cattle
+                    </NavLink></a>
+                    <a className='px-2 font-medium'><NavLink
+                        to="/service"
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "bg-green-900 text-yellow-200 px-4 py-2 rounded" : ""
+                        }
+                    >
+                        Service
+                    </NavLink></a>
+                    <a className='px-2 font-medium'><NavLink
                         to="/about"
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "bg-green-900 text-yellow-200 px-4 py-2 rounded" : ""

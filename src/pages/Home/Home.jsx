@@ -9,7 +9,7 @@ import NewsFeed from "../../components/NewsFeed/NewsFeed";
 import Product from "../../components/Product/Product";
 import Quote from "../../components/Quote/Quote";
 // import Search from "../../components/Search/Search";
-import Service from "../../components/Service/Service";
+import Service from "../Service/Service";
 // import Slider from "../../components/Slider/Slider";
 import Team from "../../components/Team/Team";
 import Video from "../../components/Video/Video";

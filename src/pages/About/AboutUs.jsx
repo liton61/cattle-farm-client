@@ -1,7 +1,7 @@
 import about from '../../assets/about-thumb-01.jpg';
 import liton from '../../assets/liton.jpg';
 import sumon from '../../assets/sumon.png';
-import Service from '../../components/Service/Service';
+import Service from '../Service/Service';
 import Journey from './Journey';
 
 const AboutUs = () => {
