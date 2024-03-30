@@ -88,6 +88,14 @@ const Navbar = () => {
                     >
                         About
                     </NavLink></a>
+                    <a className='px-2 font-medium'><NavLink
+                        to="/contact"
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "bg-green-900 text-yellow-200 px-4 py-2 rounded" : ""
+                        }
+                    >
+                        Contact
+                    </NavLink></a>
                 </ul>
             </div>
             <div className="navbar-end">

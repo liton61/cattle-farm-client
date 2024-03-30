@@ -1,4 +1,4 @@
-import AboutUs from "../../components/AboutUs/AboutUs";
+import Mission from "../../components/Mission/Mission";
 import Banner from "../../components/Banner/Banner";
 import Booking from "../../components/Booking/Booking";
 import Brand from "../../components/Brand/Brand";
@@ -24,7 +24,8 @@ const Home = () => {
             {/* <Slider></Slider> */}
             {/* <Search></Search> */}
             {/* <Cattle></Cattle> */}
-            <AboutUs></AboutUs>
+            {/* <AboutUs></AboutUs> */}
+            <Mission></Mission>
             <Product></Product>
             {/* <Search></Search> */}
             {/* <Cattle></Cattle> */}

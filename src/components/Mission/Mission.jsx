@@ -1,7 +1,7 @@
 import about1 from '../../assets/about-img-01.jpg'
 import about2 from '../../assets/about-img-02.jpg'
 
-const AboutUs = () => {
+const Mission = () => {
     return (
         <div className="lg:w-3/4 mx-auto lg:px-0 px-5 pt-16">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
@@ -15,7 +15,7 @@ const AboutUs = () => {
                 </div>
                 <div>
                     <div>
-                        <h5 className='font-bold text-green-900'>About Us</h5>
+                        {/* <h5 className='font-bold text-green-900'>About Us</h5> */}
                         <h1 className='text-5xl font-bold'>KNOW ABOUT OUR FARM & HISTORY</h1>
                         <p className='text-justify py-5'>We have been working in this industry for more than 30 years with trust and honesty. All hands must be on deck if we are to achieve our goal of improving global nutrition.</p>
                     </div>
@@ -39,4 +39,4 @@ const AboutUs = () => {
     );
 };
 
-export default AboutUs;
+export default Mission;
