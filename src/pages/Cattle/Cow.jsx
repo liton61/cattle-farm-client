@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import banner from '../../assets/breadcrumb.jpg';
+import banner from '../../assets/hero-1.jpg';
 
 const Cow = () => {
     const [cow, setCow] = useState([]);
@@ -16,6 +16,11 @@ const Cow = () => {
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src={banner} className="w-full" />
+                    <div className="absolute flex justify-center transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <div className="bg-black bg-opacity-50 lg:p-10 md:p-10 p-3 rounded">
+                            <h1 className="text-3xl font-bold text-yellow-200">COW COLLECTION</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className='lg:w-3/4 mx-auto lg:px-0 px-5 mt-5 py-10'>

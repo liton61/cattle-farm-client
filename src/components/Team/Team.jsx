@@ -9,7 +9,7 @@ const Team = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 <div className='bg-yellow-200 shadow-xl text-green-900 rounded'>
                     <div className='flex justify-center pt-5'>
-                        <img className='h-52 w-52 rounded-full' src={liton} alt="" />
+                        <img className='h-52 w-52 rounded-full border-dashed border-2 border-green-900' src={liton} alt="" />
                     </div>
                     <div className='py-5'>
                         <h3 className='text-2xl font-bold text-center'>Liton Mahmud</h3>
@@ -23,7 +23,7 @@ const Team = () => {
                 </div>
                 <div className='bg-yellow-200 shadow-xl text-green-900 rounded'>
                     <div className='flex justify-center pt-5'>
-                        <img className='h-52 w-52 rounded-full' src={lia} alt="" />
+                        <img className='h-52 w-52 rounded-full border-dashed border-2 border-green-900' src={lia} alt="" />
                     </div>
                     <div className='py-5'>
                         <h3 className='text-2xl font-bold text-center'>Lia Mahmud</h3>
@@ -37,7 +37,7 @@ const Team = () => {
                 </div>
                 <div className='bg-yellow-200 shadow-xl text-green-900 rounded'>
                     <div className='flex justify-center pt-5'>
-                        <img className='h-52 w-52 rounded-full' src={sumon} alt="" />
+                        <img className='h-52 w-52 rounded-full border-dashed border-2 border-green-900' src={sumon} alt="" />
                     </div>
                     <div className='py-5'>
                         <h3 className='text-2xl font-bold text-center'>Sumon Ismail</h3>

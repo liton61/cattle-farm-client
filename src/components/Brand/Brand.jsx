@@ -9,19 +9,19 @@ const Brand = () => {
         <div className='lg:w-3/4 mx-auto lg:px-0 px-5 py-16'>
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 border-t-2 border-green-900 pt-16'>
                 <div className='flex justify-center'>
-                    <img src={brand1} alt="" className="hover:opacity-100 opacity-25 duration-300 cursor-pointer" />
+                    <img src={brand1} alt="" />
                 </div>
                 <div className='flex justify-center'>
-                    <img src={brand2} alt="" className="hover:opacity-100 opacity-25 duration-300 cursor-pointer" />
+                    <img src={brand2} alt="" />
                 </div>
                 <div className='flex justify-center'>
-                    <img src={brand3} alt="" className="hover:opacity-100 opacity-25 duration-300 cursor-pointer" />
+                    <img src={brand3} alt="" />
                 </div>
                 <div className='flex justify-center'>
-                    <img src={brand4} alt="" className="hover:opacity-100 opacity-25 duration-300 cursor-pointer" />
+                    <img src={brand4} alt="" />
                 </div>
                 <div className='flex justify-center'>
-                    <img src={brand5} alt="" className="hover:opacity-100 opacity-25 duration-300 cursor-pointer" />
+                    <img src={brand5} alt="" />
                 </div>
             </div>
         </div>

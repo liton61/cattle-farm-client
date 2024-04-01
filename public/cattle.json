@@ -3,30 +3,38 @@
         "title": "Australian Cow",
         "image": "https://i.ibb.co/ZgCrmYR/cow-5.jpg",
         "category": "cow",
-        "price": 1500,
-        "age": 3,
-        "weight": 1200
+        "price": 150000,
+        "age": 14,
+        "weight": 200
     },
     {
-        "title": "Australian Cow",
+        "title": "Indian Cow",
         "image": "https://i.ibb.co/ZgCrmYR/cow-5.jpg",
-        "category": "goat",
-        "price": 1200,
-        "age": 2,
-        "weight": 1000
+        "category": "cow",
+        "price": 150000,
+        "age": 14,
+        "weight": 200
+    },
+    {
+        "title": "Country Cow",
+        "image": "https://i.ibb.co/ZgCrmYR/cow-5.jpg",
+        "category": "cow",
+        "price": 120000,
+        "age": 12,
+        "weight": 150
+    },
+    {
+        "title": "Country Goat",
+        "image": "https://i.ibb.co/ZgCrmYR/cow-5.jpg",
+        "category": "cow",
+        "price": 18000,
+        "age": 7,
+        "weight": 25
     },
     {
         "title": "Australian Cow",
         "image": "https://i.ibb.co/ZgCrmYR/cow-5.jpg",
         "category": "cow",
-        "price": 1800,
-        "age": 4,
-        "weight": 1300
-    },
-    {
-        "title": "Australian Cow",
-        "image": "https://i.ibb.co/ZgCrmYR/cow-5.jpg",
-        "category": "lamp",
         "price": 1600,
         "age": 5,
         "weight": 1400
@@ -50,10 +58,34 @@
     {
         "title": "Australian Cow",
         "image": "https://i.ibb.co/ZgCrmYR/cow-5.jpg",
-        "category": "lamp",
+        "category": "goat",
         "price": 2000,
         "age": 4,
         "weight": 1350
+    },
+    {
+        "title": "Australian Cow",
+        "image": "https://i.ibb.co/ZgCrmYR/cow-5.jpg",
+        "category": "goat",
+        "price": 2200,
+        "age": 3,
+        "weight": 1280
+    },
+    {
+        "title": "Australian Cow",
+        "image": "https://i.ibb.co/ZgCrmYR/cow-5.jpg",
+        "category": "goat",
+        "price": 2200,
+        "age": 3,
+        "weight": 1280
+    },
+    {
+        "title": "Australian Cow",
+        "image": "https://i.ibb.co/ZgCrmYR/cow-5.jpg",
+        "category": "goat",
+        "price": 2200,
+        "age": 3,
+        "weight": 1280
     },
     {
         "title": "Australian Cow",
