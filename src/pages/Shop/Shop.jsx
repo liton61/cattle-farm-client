@@ -36,7 +36,18 @@ const Shop = () => {
                             <p className="font-medium text-gray-600">Price : {shop.price} Tk</p>
                             <div className="card-actions justify-center gap-10">
                                 <button><i className="fa-solid fa-cart-plus text-xl text-green-700"></i></button>
-                                <button><i className="fa-solid fa-eye text-xl text-green-700"></i></button>
+                                <button onClick={() => document.getElementById('my_modal_5').showModal()}><i className="fa-solid fa-eye text-xl text-green-700"></i></button>
+                                <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                                    <div className="modal-box">
+                                        <h3 className="font-bold text-lg">Hello!</h3>
+                                        <p className="py-4">Press ESC key or click the button below to close</p>
+                                        <div className="modal-action">
+                                            <form method="dialog">
+                                                <button className="btn">Close</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </dialog>
                                 <button><i className="fa-solid fa-heart text-xl text-green-700"></i></button>
                             </div>
                         </div>
