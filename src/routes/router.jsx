@@ -10,6 +10,7 @@ import Shop from "../pages/Shop/Shop";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import AdminHome from "../pages/Dashboard/AdminHome";
 import UserHome from "../pages/Dashboard/UserHome";
+import AllUsers from "../pages/Dashboard/AllUsers";
 
 
 const router = createBrowserRouter([
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
             {
                 path: "adminHome",
                 element: <AdminHome></AdminHome>
+            },
+            {
+                path:"allUsers",
+                element:<AllUsers></AllUsers>
             },
 
             // admin dashboard

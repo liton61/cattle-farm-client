@@ -25,7 +25,7 @@ const Register = () => {
             .then(res => {
                 console.log(res.user)
                 profile(name, photo)
-                axiosPublic.post('/users', userInfo)
+                axiosPublic.post('/user', userInfo)
                     .then(res => {
                         if (res.data.insertedId) {
                             Swal.fire({

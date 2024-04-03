@@ -19,7 +19,7 @@ const Login = () => {
                     name: res.user?.displayName,
                     role: 'member'
                 }
-                axiosPublic.post('/users', usersInfo)
+                axiosPublic.post('/user', usersInfo)
                     .then(res => {
                         console.log(res.data);
                     })
