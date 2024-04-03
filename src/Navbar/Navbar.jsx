@@ -2,9 +2,11 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { useContext } from 'react';
 import { AuthContext } from '../authentication/Provider/AuthProvider';
+import useAdmin from '../hooks/useAdmin';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const [isAdmin] = useAdmin();
 
     const handleSingOut = () => {
         logOut()
@@ -24,46 +26,54 @@ const Navbar = () => {
 
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-green-900 text-yellow-200 rounded w-52">
-                        <a className='border-b border-yellow-200 mb-2 pb-2'><NavLink
+                        <li><NavLink
                             to="/"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "active" : ""
-                            }
+                            className="hover:bg-transparent"
                         >
                             Home
-                        </NavLink></a>
-                        <a className='border-b border-yellow-200 mb-2 pb-2'><NavLink
-                            to="/about"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "active" : ""
-                            }
+                        </NavLink></li>
+                        <li><NavLink
+                            to="/cow"
+                            className="hover:bg-transparent"
                         >
-                            About
-                        </NavLink></a>
-                        <a className='border-b border-yellow-200 mb-2 pb-2'><NavLink
-                            to="/about"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "active" : ""
-                            }
+                            Cow
+                        </NavLink></li>
+                        <li><NavLink
+                            to="/goat"
+                            className="hover:bg-transparent"
                         >
-                            Contact
-                        </NavLink></a>
-                        <a className='border-b border-yellow-200 mb-2 pb-2'><NavLink
-                            to="/about"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "active" : ""
-                            }
+                            Goat
+                        </NavLink></li>
+                        <li><NavLink
+                            to="/shop"
+                            className="hover:bg-transparent"
                         >
-                            Shope
-                        </NavLink></a>
-                        <a><NavLink
-                            to="/about"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "active" : ""
-                            }
+                            Shop
+                        </NavLink></li>
+                        <li><NavLink
+                            to="/blog"
+                            className="hover:bg-transparent"
                         >
                             Blog
-                        </NavLink></a>
+                        </NavLink></li>
+                        {
+                            user && isAdmin &&
+                            <li><NavLink
+                                to="/dashboard/adminHome"
+                                className="hover:bg-transparent"
+                            >
+                                Dashboard
+                            </NavLink></li>
+                        }
+                        {
+                            user && !isAdmin &&
+                            <li><NavLink
+                                to="/dashboard/userHome"
+                                className="hover:bg-transparent"
+                            >
+                                Dashboard
+                            </NavLink></li>
+                        }
                     </ul>
                 </div>
                 <div>
@@ -72,46 +82,57 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <a className='px-2 font-medium'><NavLink
-                        to="/"
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "bg-green-900 text-yellow-200 px-4 py-2 rounded" : ""
-                        }
-                    >
-                        HOME
-                    </NavLink></a>
-                    <a className='px-2 font-medium'><NavLink
+                    <li className='font-medium'>
+                        <NavLink
+                            to="/"
+                            className="hover:bg-transparent"
+                        >
+                            Home
+                        </NavLink>
+                    </li>
+
+                    <li className='font-medium'><NavLink
                         to="/cow"
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "bg-green-900 text-yellow-200 px-4 py-2 rounded" : ""
-                        }
+                        className="hover:bg-transparent"
                     >
-                        COW
-                    </NavLink></a>
-                    <a className='px-2 font-medium'><NavLink
+                        Cow
+                    </NavLink></li>
+                    <li className='font-medium'><NavLink
                         to="/goat"
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "bg-green-900 text-yellow-200 px-4 py-2 rounded" : ""
-                        }
+                        className="hover:bg-transparent"
                     >
-                        GOAT
-                    </NavLink></a>
-                    <a className='px-2 font-medium'><NavLink
+                        Goat
+                    </NavLink></li>
+                    <li className='font-medium'><NavLink
                         to="/shop"
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "bg-green-900 text-yellow-200 px-4 py-2 rounded" : ""
-                        }
+                        className="hover:bg-transparent"
                     >
-                        SHOP
-                    </NavLink></a>
-                    <a className='px-2 font-medium'><NavLink
+                        Shop
+                    </NavLink></li>
+                    <li className='font-medium'><NavLink
                         to="/blog"
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "bg-green-900 text-yellow-200 px-4 py-2 rounded" : ""
-                        }
+                        className="hover:bg-transparent"
                     >
-                        BLOG
-                    </NavLink></a>
+                        Blog
+                    </NavLink></li>
+                    {
+                        user && isAdmin &&
+                        <li className="font-medium"><NavLink
+                            to="/dashboard/adminHome"
+                            className="hover:bg-transparent"
+                        >
+                            Dashboard
+                        </NavLink></li>
+                    }
+                    {
+                        user && !isAdmin &&
+                        <li className="font-medium"><NavLink
+                            to="/dashboard/userHome"
+                            className="hover:bg-transparent"
+                        >
+                            Dashboard
+                        </NavLink></li>
+                    }
                 </ul>
             </div>
             <div className="navbar-end">

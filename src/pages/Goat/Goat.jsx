@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const Goat = () => {
     const [goat, setGoat] = useState([]);
     useEffect(() => {
-        fetch('goat.json')
+        fetch('http://localhost:5000/goat')
             .then(res => res.json())
             .then(data => setGoat(data))
     }, [])

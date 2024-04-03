@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const Cow = () => {
     const [cow, setCow] = useState([]);
     useEffect(() => {
-        fetch('cow.json')
+        fetch('http://localhost:5000/cow')
             .then(res => res.json())
             .then(data => setCow(data))
     }, [])

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import product1 from '../../assets/product-icon-01.png';
 import product2 from '../../assets/product-icon-02.png';
 
@@ -9,13 +10,17 @@ const Product = () => {
                     <img src={product1} alt="" />
                     <h1 className='text-2xl font-semibold text-white'>WORLDWIDE FRESH MEAT
                         <br /> DELIVERY</h1>
-                    <i className="fa-solid fa-arrow-right text-4xl font-extrabold text-yellow-200"></i>
+                    <Link to='/shop'>
+                        <button><i className="fa-solid fa-arrow-right text-4xl font-extrabold text-yellow-200"></i></button>
+                    </Link>
                 </div>
                 <div className='bg-green-900 flex items-center p-7 gap-5 rounded'>
                     <img src={product2} alt="" />
                     <h1 className='text-2xl font-semibold text-white'>WORLDWIDE FRESH MILK
                         <br /> DELIVERY</h1>
-                    <i className="fa-solid fa-arrow-right text-4xl font-extrabold text-yellow-200"></i>
+                    <Link to='/shop'>
+                        <button><i className="fa-solid fa-arrow-right text-4xl font-extrabold text-yellow-200"></i></button>
+                    </Link>
                 </div>
             </div>
         </div>

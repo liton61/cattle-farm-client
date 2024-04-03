@@ -7,6 +7,9 @@ import Register from "../pages/Register/Register";
 import Cow from "../pages/Cow/Cow";
 import Goat from "../pages/Goat/Goat";
 import Shop from "../pages/Shop/Shop";
+import Dashboard from "../pages/Dashboard/Dashboard";
+import AdminHome from "../pages/Dashboard/AdminHome";
+import UserHome from "../pages/Dashboard/UserHome";
 
 
 const router = createBrowserRouter([
@@ -40,6 +43,25 @@ const router = createBrowserRouter([
     {
         path: "/register",
         element: <Register></Register>
+    },
+    {
+        path: "dashboard",
+        element: <Dashboard></Dashboard>,
+        children: [
+
+            // user dashboard
+            {
+                path: "adminHome",
+                element: <AdminHome></AdminHome>
+            },
+
+            // admin dashboard
+            {
+                path: "userHome",
+                element: <UserHome></UserHome>
+            }
+
+        ]
     }
 ]);
 

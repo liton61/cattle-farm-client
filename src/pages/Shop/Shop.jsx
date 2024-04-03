@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const Shop = () => {
     const [shop, setShop] = useState([]);
     useEffect(() => {
-        fetch('shop.json')
+        fetch('http://localhost:5000/shop')
             .then(res => res.json())
             .then(data => setShop(data))
     }, [])
