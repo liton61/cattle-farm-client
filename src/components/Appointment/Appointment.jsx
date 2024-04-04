@@ -1,6 +1,6 @@
 import phone from '../../assets/phone-icon.png';
 
-const Booking = () => {
+const Appointment = () => {
     return (
         <div className="lg:w-3/4 mx-auto px-5 bg-green-900 p-5 my-16">
             <p className="font-medium text-yellow-200">Customer Request</p>
@@ -48,4 +48,4 @@ const Booking = () => {
     );
 };
 
-export default Booking;
+export default Appointment;

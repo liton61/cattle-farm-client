@@ -15,10 +15,10 @@ const Video = () => {
                     <iframe width="500" height="315" src="https://www.youtube.com/embed/4xgdjiQom5s?si=ovXl1PPm43c1syyb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
-            <div className="flex justify-center gap-10 py-10">
+            {/* <div className="flex justify-center gap-10 py-10">
                 <button className='bg-green-900 text-yellow-200 px-4 py-3 rounded font-bold'>MAKE APPOINTMENT <i className="fa-solid fa-arrow-right text-yellow-200 font-bold"></i></button>
                 <button className='bg-green-900 text-yellow-200 px-4 py-3 rounded font-bold'>GET A QUOTE <i className="fa-solid fa-arrow-right text-yellow-200 font-bold"></i></button>
-            </div>
+            </div> */}
         </div>
     );
 };

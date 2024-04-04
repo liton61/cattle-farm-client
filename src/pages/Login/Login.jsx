@@ -17,7 +17,8 @@ const Login = () => {
                 const usersInfo = {
                     email: res.user?.email,
                     name: res.user?.displayName,
-                    role: 'member'
+                    photo: res.user?.photoURL,
+                    role: 'user'
                 }
                 axiosPublic.post('/user', usersInfo)
                     .then(res => {

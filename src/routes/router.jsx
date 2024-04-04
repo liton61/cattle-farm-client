@@ -11,6 +11,8 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import AdminHome from "../pages/Dashboard/AdminHome";
 import UserHome from "../pages/Dashboard/UserHome";
 import AllUsers from "../pages/Dashboard/AllUsers";
+import Payment from "../pages/Payment/Payment";
+import Booking from "../pages/Booking/Booking";
 
 
 const router = createBrowserRouter([
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
             {
                 path: "/shop",
                 element: <Shop></Shop>
+            },
+            {
+                path:"/booking/:id",
+                element:<Booking></Booking>
+            },
+            {
+                path: "/payment",
+                element: <Payment></Payment>
             }
         ],
     },
@@ -56,8 +66,8 @@ const router = createBrowserRouter([
                 element: <AdminHome></AdminHome>
             },
             {
-                path:"allUsers",
-                element:<AllUsers></AllUsers>
+                path: "allUsers",
+                element: <AllUsers></AllUsers>
             },
 
             // admin dashboard

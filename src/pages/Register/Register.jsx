@@ -16,7 +16,7 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const photo = form.photo.value;
-        const role = 'member'
+        const role = 'user'
 
         const userInfo = { name, email, password, photo, role };
         // console.log(userInfo);

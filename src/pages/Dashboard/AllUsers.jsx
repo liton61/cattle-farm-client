@@ -20,11 +20,11 @@ const AllUsers = () => {
                 if (res.data.modifiedCount > 0) {
                     refetch();
                     Swal.fire({
-                        position: "top",
+                        position: "center",
                         icon: "success",
                         title: `${user.name} is an Admin Now!`,
                         showConfirmButton: false,
-                        timer: 1500
+                        timer: 2000
                     });
                 }
             })
@@ -66,7 +66,7 @@ const AllUsers = () => {
             <div className="overflow-x-auto mt-10">
                 <table className="table w-full">
                     {/* head */}
-                    <thead className="bg-yellow-200">
+                    <thead className="bg-success text-base-200">
                         <tr>
                             <th>#</th>
                             <th>Name</th>

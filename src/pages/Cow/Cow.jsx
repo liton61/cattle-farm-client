@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const Cow = () => {
@@ -29,8 +30,10 @@ const Cow = () => {
                             </h2>
                             <p className="font-medium text-gray-600">Price : {cow.price} Tk</p>
                             <p className="font-medium text-gray-600">Age : {cow.age} Months Tk</p>
-                            <div className="card-actions justify-end">
+                            <div className="card-actions">
+                                <Link to={`/booking/${cow._id}`} className="w-full">
                                 <button className="btn bg-green-900 hover:bg-green-800 text-yellow-200 w-full uppercase">Book Now</button>
+                                </Link>
                             </div>
                         </div>
                     </div>))}
