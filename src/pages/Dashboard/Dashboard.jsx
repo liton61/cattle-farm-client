@@ -29,6 +29,12 @@ const Dashboard = () => {
                                                 <i className="fa-solid fa-house"></i>Admin Home
                                             </NavLink></li>
                                             <li className="font-medium mb-2"><NavLink
+                                                to="/dashboard/booking"
+                                                className="hover:bg-transparent"
+                                            >
+                                                <i className="fa-solid fa-calendar-days"></i>Booking
+                                            </NavLink></li>
+                                            <li className="font-medium mb-2"><NavLink
                                                 to="/dashboard/allUsers"
                                                 className="hover:bg-transparent"
                                             >
