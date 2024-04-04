@@ -13,7 +13,7 @@ const Booking = () => {
         }
     })
 
-    const handleDeleteUser = user => {
+    const handleDeleteUser = cow => {
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -24,7 +24,7 @@ const Booking = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                axiosSecure.delete(`/user/${user._id}`)
+                axiosSecure.delete(`/booking/${cow._id}`)
                     .then(res => {
                         // console.log(res.data);
                         if (res.data.deletedCount > 0) {
@@ -66,17 +66,17 @@ const Booking = () => {
                     </thead>
                     <tbody>
                         {
-                            booking.map((user, index) => <tr key={user._id}>
+                            booking.map((cow, index) => <tr key={cow._id}>
                                 <th>{index + 1}</th>
-                                <td>{user.name}</td>
-                                <td>{user.email}</td>
-                                <td>{user.phone}</td>
-                                <td>{user.date}</td>
-                                <td>{user.price} Tk</td>
-                                <td>{user.weight} Kg</td>
-                                <td>{user.age} Months</td>
-                                <td>{user.category}</td>
-                                <button onClick={() => handleDeleteUser(user)}><i className="fa-solid fa-trash-can text-xl text-red-600 mt-3"></i></button>
+                                <td>{cow.name}</td>
+                                <td>{cow.email}</td>
+                                <td>{cow.phone}</td>
+                                <td>{cow.date}</td>
+                                <td>{cow.price} Tk</td>
+                                <td>{cow.weight} Kg</td>
+                                <td>{cow.age} Months</td>
+                                <td>{cow.category}</td>
+                                <button onClick={() => handleDeleteUser(cow)}><i className="fa-solid fa-trash-can text-xl text-red-600 mt-3"></i></button>
                             </tr>)
                         }
 
