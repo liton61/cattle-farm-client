@@ -14,6 +14,7 @@ import AllUsers from "../pages/Dashboard/AllUsers";
 import Payment from "../pages/Payment/Payment";
 import BookingForm from "../pages/BookingForm/BookingForm";
 import Booking from "../pages/Dashboard/Booking";
+import Cart from "../pages/Cart/Cart";
 
 
 const router = createBrowserRouter([
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
             {
                 path: "booking",
                 element: <Booking></Booking>
+            },
+            {
+                path: "cart",
+                element: <Cart></Cart>
             },
             {
                 path: "allUsers",

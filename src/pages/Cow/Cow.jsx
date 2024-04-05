@@ -22,7 +22,7 @@ const Cow = () => {
             </div>
             <div className='lg:w-3/4 mx-auto lg:px-0 px-5 py-10'>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
-                    {cow.map(cow => (<div key={cow._id} className="card card-compact bg-base-100 shadow-xl rounded-none">
+                    {cow.map(cow => (<div key={cow._id} className="card card-compact border border-green-700 rounded">
                         <figure><img src={cow.image} alt="" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">{cow.title}
