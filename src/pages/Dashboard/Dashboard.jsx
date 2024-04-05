@@ -35,6 +35,12 @@ const Dashboard = () => {
                                                 <i className="fa-solid fa-calendar-days"></i>Booking
                                             </NavLink></li>
                                             <li className="font-medium mb-2"><NavLink
+                                                to="/dashboard/order"
+                                                className="hover:bg-transparent"
+                                            >
+                                                <i className="fa-solid fa-shopping-basket"></i>Order
+                                            </NavLink></li>
+                                            <li className="font-medium mb-2"><NavLink
                                                 to="/dashboard/allUsers"
                                                 className="hover:bg-transparent"
                                             >

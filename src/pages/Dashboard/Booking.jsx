@@ -40,11 +40,11 @@ const Booking = () => {
         });
     }
     return (
-        <div className="lg:w-3/4 mx-auto lg:px-0 px-5 mt-10">
+        <div className="lg:px-20 px-5 mt-10">
             <div className="stats shadow flex justify-center text-center">
                 <div className="stat">
                     <div className="stat-title">Total Booking</div>
-                    <div className="stat-value">{booking.length}</div>
+                    <div className="stat-value text-secondary">{booking.length}</div>
                 </div>
             </div>
             <div className="overflow-x-auto mt-10">
@@ -77,7 +77,7 @@ const Booking = () => {
                                 <td>{cow.age} Months</td>
                                 <td>{cow.category}</td>
                                 <td className="flex justify-center">
-                                    <button onClick={() => handleDeleteUser(cow)}><i className="fa-solid fa-trash-can text-xl text-red-600 mt-3"></i></button>
+                                    <button onClick={() => handleDeleteUser(cow)}><i className="fa-solid fa-trash-can text-xl text-red-600"></i></button>
                                 </td>
                             </tr>)
                         }

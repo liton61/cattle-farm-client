@@ -23,8 +23,8 @@ const AdminHome = () => {
                     user?.displayName ? user.displayName : 'Back'
                 }
             </h2>
-            <div className="flex justify-center items-center my-10">
-                <div className="stats stats-vertical lg:stats-horizontal md:stats-horizontal shadow lg:w-3/4 w-full lg:mx-0 mx-5">
+            <div className="lg:px-20 px-5 mt-10">
+                <div className="stats stats-vertical lg:stats-horizontal md:stats-horizontal shadow w-full">
 
                     <div className="stat place-items-center">
                         <div className="stat-title">Total Reviews</div>

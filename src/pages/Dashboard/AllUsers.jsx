@@ -56,11 +56,11 @@ const AllUsers = () => {
         });
     }
     return (
-        <div className="lg:w-3/4 mx-auto lg:px-0 px-5 mt-10">
+        <div className="lg:px-20 px-5 mt-10">
             <div className="stats shadow flex justify-center text-center">
                 <div className="stat">
                     <div className="stat-title">Total Users</div>
-                    <div className="stat-value">{user.length}</div>
+                    <div className="stat-value text-secondary">{user.length}</div>
                 </div>
             </div>
             <div className="overflow-x-auto mt-10">
