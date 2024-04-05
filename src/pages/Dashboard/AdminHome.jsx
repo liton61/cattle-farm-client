@@ -24,24 +24,28 @@ const AdminHome = () => {
                 }
             </h2>
             <div className="flex justify-center items-center my-10">
-                <div className="stats stats-vertical lg:stats-horizontal md:stats-horizontal shadow">
+                <div className="stats stats-vertical lg:stats-horizontal md:stats-horizontal shadow lg:w-3/4 w-full lg:mx-0 mx-5">
 
-                    <div className="stat place-items-center">
+                    <div className="stat place-items-center w-full">
                         <div className="stat-title">Total Reviews</div>
                         <div className="stat-value text-secondary">{stats.review}</div>
                     </div>
 
-                    <div className="stat place-items-center">
-                        <div className="stat-title">Total Menu</div>
-                        <div className="stat-value text-secondary">{stats.menu}</div>
+                    <div className="stat place-items-center w-full">
+                        <div className="stat-title">Total Booking</div>
+                        <div className="stat-value text-secondary">{stats.booking}</div>
                     </div>
 
-                    <div className="stat place-items-center">
-                        <div className="stat-title">Total Orders</div>
-                        <div className="stat-value text-secondary">{stats.cart}</div>
+                    <div className="stat place-items-center w-full">
+                        <div className="stat-title">Total Cow</div>
+                        <div className="stat-value text-secondary">{stats.cow}</div>
+                    </div>
+                    <div className="stat place-items-center w-full">
+                        <div className="stat-title">Total Goat</div>
+                        <div className="stat-value text-secondary">{stats.goat}</div>
                     </div>
 
-                    <div className="stat place-items-center">
+                    <div className="stat place-items-center w-full">
                         <div className="stat-figure text-secondary">
                             <div className="avatar online">
                                 <div className="w-16 rounded-full">

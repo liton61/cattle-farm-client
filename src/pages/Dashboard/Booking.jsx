@@ -76,7 +76,9 @@ const Booking = () => {
                                 <td>{cow.weight} Kg</td>
                                 <td>{cow.age} Months</td>
                                 <td>{cow.category}</td>
-                                <button onClick={() => handleDeleteUser(cow)}><i className="fa-solid fa-trash-can text-xl text-red-600 mt-3"></i></button>
+                                <td className="flex justify-center">
+                                    <button onClick={() => handleDeleteUser(cow)}><i className="fa-solid fa-trash-can text-xl text-red-600 mt-3"></i></button>
+                                </td>
                             </tr>)
                         }
 
