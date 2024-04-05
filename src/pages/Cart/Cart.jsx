@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import useCart from "../../hooks/useCart";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
     const [cart, refetch] = useCart();
@@ -49,11 +50,13 @@ const Cart = () => {
 
                                     <div className="stat place-items-center">
                                         <div className="stat-title">Total Price</div>
-                                        <div className="stat-value text-secondary">${totalPrice}</div>
+                                        <div className="stat-value text-secondary">{totalPrice} Tk</div>
                                     </div>
 
                                     <div className="stat place-items-center">
-                                        <button className="btn btn-secondary font-bold">Pay Now <i className="fa-solid fa-arrow-right"></i></button>
+                                        <Link to="/payment">
+                                            <button className="btn btn-secondary font-bold">Pay Now <i className="fa-solid fa-arrow-right"></i></button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +91,7 @@ const Cart = () => {
                                                 <td>${item.price}</td>
                                                 <td>Pending</td>
                                                 <td>
-                                                    <button onClick={() => handleDelete(item._id)}><i className="fa-solid fa-trash-can text-xl text-red-600 mt-5"></i></button>
+                                                    <button onClick={() => handleDelete(item._id)}><i className="fa-solid fa-trash-can text-xl text-red-600"></i></button>
                                                 </td>
                                             </tr>)
                                         }

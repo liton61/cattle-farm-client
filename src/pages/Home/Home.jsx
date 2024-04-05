@@ -9,6 +9,7 @@ import Team from "../../components/Team/Team";
 import Video from "../../components/Video/Video";
 import About from "../../components/About/About";
 import Appointment from "../../components/Appointment/Appointment";
+import Testimonials from "../../components/Testimonials/Testimonials";
 
 
 
@@ -26,6 +27,7 @@ const Home = () => {
             <Team></Team>
             <Appointment></Appointment>
             <NewsFeed></NewsFeed>
+            <Testimonials></Testimonials>
         </div>
     );
 };

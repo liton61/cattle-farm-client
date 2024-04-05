@@ -1,8 +1,10 @@
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../../hooks/useAdmin";
+import useCart from "../../hooks/useCart";
 
 
 const Dashboard = () => {
+    const [item] = useCart();
     const [isAdmin] = useAdmin();
     return (
         <div>
@@ -54,6 +56,12 @@ const Dashboard = () => {
                                                 className="hover:bg-transparent"
                                             >
                                                 <i className="fa-solid fa-house"></i>User Home
+                                            </NavLink></li>
+                                            <li className="font-medium mb-2"><NavLink
+                                                to="/dashboard/cart"
+                                                className="hover:bg-transparent"
+                                            >
+                                                <i className="fa-solid fa-cart-plus"></i> Cart ({item.length})
                                             </NavLink></li>
                                             <li className="font-medium mb-2"><NavLink
                                                 to="/dashboard/review"

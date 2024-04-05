@@ -15,7 +15,7 @@ import Payment from "../pages/Payment/Payment";
 import BookingForm from "../pages/BookingForm/BookingForm";
 import Booking from "../pages/Dashboard/Booking";
 import Cart from "../pages/Cart/Cart";
-import Order from "../pages/Dashboard/Order/Order";
+import Order from "../pages/Dashboard/Order";
 
 
 const router = createBrowserRouter([
