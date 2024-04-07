@@ -39,7 +39,7 @@ const Cart = () => {
             {
                 cart.length > 0 ? (
                     <div>
-                        <div className="lg:w-3/4 mx-auto lg:px-0 px-5 mt-10">
+                        <div className="lg:px-20 px-5 mt-10">
                             <div className="flex justify-center">
                                 <div className="stats stats-vertical lg:stats-horizontal md:stats-horizontal shadow w-full">
 
@@ -61,7 +61,7 @@ const Cart = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="lg:w-3/4 mx-auto mt-10 lg:px-0 md:px-4 px-4">
+                        <div className="lg:px-20 mt-10 px-4">
                             <div className="overflow-x-auto">
                                 <table className="table">
                                     <thead className="bg-success text-base-200">

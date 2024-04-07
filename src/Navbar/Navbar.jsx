@@ -3,11 +3,9 @@ import logo from '../assets/logo.png';
 import { useContext } from 'react';
 import { AuthContext } from '../authentication/Provider/AuthProvider';
 import useAdmin from '../hooks/useAdmin';
-import useCart from '../hooks/useCart';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    const [item] = useCart();
     const [isAdmin] = useAdmin();
 
     const handleSingOut = () => {
@@ -57,12 +55,6 @@ const Navbar = () => {
                             className="hover:bg-transparent"
                         >
                             Blog
-                        </NavLink></li>
-                        <li><NavLink
-                            to="/cart"
-                            className="hover:bg-transparent"
-                        >
-                            Cart
                         </NavLink></li>
                         {
                             user && isAdmin &&
@@ -122,12 +114,6 @@ const Navbar = () => {
                         className="hover:bg-transparent"
                     >
                         Blog
-                    </NavLink></li>
-                    <li className='font-medium'><NavLink
-                        to="/dashboard/cart"
-                        className="hover:bg-transparent"
-                    >
-                        <i className="fa-solid fa-cart-plus"></i> Cart ({item.length})
                     </NavLink></li>
                     {
                         user && isAdmin &&

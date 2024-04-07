@@ -57,12 +57,6 @@ const AllUsers = () => {
     }
     return (
         <div className="lg:px-20 px-5 mt-10">
-            <div className="stats shadow flex justify-center text-center">
-                <div className="stat">
-                    <div className="stat-title">Total Users</div>
-                    <div className="stat-value text-secondary">{user.length}</div>
-                </div>
-            </div>
             <div className="overflow-x-auto mt-10">
                 <table className="table w-full">
                     {/* head */}

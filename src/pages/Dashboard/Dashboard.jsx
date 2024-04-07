@@ -1,10 +1,12 @@
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../../hooks/useAdmin";
 import useCart from "../../hooks/useCart";
+import useBooking from "../../hooks/useBooking";
 
 
 const Dashboard = () => {
-    const [item] = useCart();
+    const [booking] = useBooking();
+    const [cart] = useCart();
     const [isAdmin] = useAdmin();
     return (
         <div>
@@ -58,10 +60,16 @@ const Dashboard = () => {
                                                 <i className="fa-solid fa-house"></i>User Home
                                             </NavLink></li>
                                             <li className="font-medium mb-2"><NavLink
+                                                to="/dashboard/myBooking"
+                                                className="hover:bg-transparent"
+                                            >
+                                                <i className="fa-solid fa-calendar-days"></i>My Booking ({booking.length})
+                                            </NavLink></li>
+                                            <li className="font-medium mb-2"><NavLink
                                                 to="/dashboard/cart"
                                                 className="hover:bg-transparent"
                                             >
-                                                <i className="fa-solid fa-cart-plus"></i> Cart ({item.length})
+                                                <i className="fa-solid fa-cart-plus"></i> Cart ({cart.length})
                                             </NavLink></li>
                                             <li className="font-medium mb-2"><NavLink
                                                 to="/dashboard/review"

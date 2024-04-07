@@ -1,20 +1,14 @@
-import { useQuery } from "@tanstack/react-query";
+
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
-import { useContext } from "react";
-import { AuthContext } from "../../authentication/Provider/AuthProvider";
+import useBooking from "../../hooks/useBooking";
+import { Link } from "react-router-dom";
 
 
-const Booking = () => {
-    const { user } = useContext(AuthContext);
+const MyBooking = () => {
+    const [booking, refetch] = useBooking();
+    const totalPrice = booking.reduce((total, cattle) => total + cattle.price, 0);
     const axiosSecure = useAxiosSecure();
-    const { data: booking = [], refetch } = useQuery({
-        queryKey: ['booking'],
-        queryFn: async () => {
-            const res = await axiosSecure.get(`/booking?email=${user.email}`);
-            return res.data;
-        }
-    })
 
     const handleDeleteUser = cow => {
         Swal.fire({
@@ -44,6 +38,28 @@ const Booking = () => {
     }
     return (
         <div className="lg:px-20 px-5 mt-10">
+            <div>
+                <div className="flex justify-center">
+                    <div className="stats stats-vertical lg:stats-horizontal md:stats-horizontal shadow w-full">
+
+                        <div className="stat place-items-center">
+                            <div className="stat-title">Total Cattle</div>
+                            <div className="stat-value text-secondary">{booking.length}</div>
+                        </div>
+
+                        <div className="stat place-items-center">
+                            <div className="stat-title">Total Price</div>
+                            <div className="stat-value text-secondary">{totalPrice} Tk</div>
+                        </div>
+
+                        <div className="stat place-items-center">
+                            <Link to="/payment">
+                                <button className="btn btn-secondary font-bold">Pay Now <i className="fa-solid fa-arrow-right"></i></button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="overflow-x-auto mt-10">
                 <table className="table w-full">
                     {/* head */}
@@ -86,4 +102,4 @@ const Booking = () => {
     );
 };
 
-export default Booking;
+export default MyBooking;

@@ -53,11 +53,11 @@ const Review = () => {
                             </select>
                         </div>
                         <div className="mb-4">
-                            <label className="text-gray-700 font-medium">Your Review</label>
+                            <label className="text-gray-700 font-medium">Your Comment</label>
                             <textarea id="detail" name="details" rows="4" className="form-textarea mt-1 w-full rounded focus:outline-none p-2"></textarea>
                         </div>
                         <div>
-                            <button className="btn btn-success font-bold w-full">Submit Review</button>
+                            <button className="btn btn-success font-bold w-full uppercase text-base-200">Submit Review</button>
                         </div>
                     </form>
                 </div>

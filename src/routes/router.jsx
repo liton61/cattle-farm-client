@@ -14,9 +14,10 @@ import AllUsers from "../pages/Dashboard/AllUsers";
 import Payment from "../pages/Payment/Payment";
 import BookingForm from "../pages/BookingForm/BookingForm";
 import Booking from "../pages/Dashboard/Booking";
-import Cart from "../pages/Cart/Cart";
 import Order from "../pages/Dashboard/Order";
 import Review from "../pages/Dashboard/Review";
+import MyBooking from "../pages/Dashboard/MyBooking";
+import Cart from "../pages/Dashboard/Cart";
 
 
 const router = createBrowserRouter([
@@ -86,6 +87,10 @@ const router = createBrowserRouter([
             {
                 path: "userHome",
                 element: <UserHome></UserHome>
+            },
+            {
+                path: "myBooking",
+                element: <MyBooking></MyBooking>
             },
             {
                 path: "cart",
