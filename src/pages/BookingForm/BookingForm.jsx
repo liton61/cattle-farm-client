@@ -15,12 +15,12 @@ const BookingForm = () => {
         const form = e.target;
         const name = form.name.value;
         const email = form.email.value;
-        const date = parseFloat(form.date.value);
-        const phone = parseFloat(form.phone.value);
+        const date = form.date.value;
+        const phone = form.phone.value;
         const price = parseFloat(form.price.value);
-        const weight = parseFloat(form.weight.value);
+        const weight = form.weight.value;
         const category = form.category.value;
-        const age = parseFloat(form.age.value);
+        const age = form.age.value;
         const details = form.details.value;
 
         const bookingInfo = { name, email, date, phone, price, weight, category, age, details };

@@ -1,32 +1,63 @@
+import { useContext } from 'react';
 import phone from '../../assets/phone-icon.png';
+import useAxiosSecure from '../../hooks/useAxiosSecure';
+import Swal from "sweetalert2";
+import { AuthContext } from '../../authentication/Provider/AuthProvider';
 
 const Appointment = () => {
+    const { user } = useContext(AuthContext);
+    const axiosSecure = useAxiosSecure();
+    const handleSubmit = e => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const call = form.call.value;
+        const date = form.date.value;
+        const userPhoto = user.photoURL;
+        const userInfo = { name, email, call, date, userPhoto };
+        // console.log(userInfo);
+
+        axiosSecure.post('/appointment', userInfo)
+            .then(res => {
+                console.log(res);
+                if (res.data.insertedId) {
+                    Swal.fire({
+                        title: "Good job !",
+                        text: "You have successfully submitted !",
+                        icon: "success"
+                    });
+                }
+                form.reset();
+
+            })
+    }
     return (
         <div className="lg:w-3/4 mx-auto px-5 bg-green-900 p-5 my-16">
             <p className="font-medium text-yellow-200">Customer Request</p>
             <h1 className="text-4xl font-bold text-yellow-200 pb-10">BOOK AN APPOINTMENT</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
-                <div>
+                <form onSubmit={handleSubmit}>
                     <label className="input input-bordered flex items-center gap-2 mb-5">
                         <i className="fa-regular fa-user"></i>
-                        <input type="text" className="grow" placeholder="Username" />
+                        <input type="text" id='name' className="grow" placeholder="Username" />
                     </label>
                     <label className="input input-bordered flex items-center gap-2 mb-5">
                         <i className="fa-regular fa-envelope"></i>
-                        <input type="text" className="grow" placeholder="Email" />
+                        <input type="text" id='email' className="grow" placeholder="Email" />
                     </label>
                     <label className="input input-bordered flex items-center gap-2 mb-5">
                         <i className="fa-solid fa-phone"></i>
-                        <input type="text" className="grow" placeholder="Call" />
+                        <input type="text" id='call' className="grow" placeholder="Call" />
                     </label>
                     <label className="input input-bordered flex items-center gap-2">
                         <i className="fa-solid fa-calendar-days"></i>
-                        <input type="date" className="grow" value="password" />
+                        <input type="date" id='date' className="grow" />
                     </label>
                     <div>
                         <button className='bg-yellow-200 text-green-900 px-4 py-3 rounded font-bold mt-5'>GET APPOINTMENT <i className="fa-solid fa-arrow-right text-green-900 font-bold"></i></button>
                     </div>
-                </div>
+                </form>
                 <div className="bg-yellow-200 rounded">
                     <div className='flex items-center gap-7 lg:px-10 px-5 py-5'>
                         <div className='border-dashed border-2 border-green-900 rounded-full p-7'>
