@@ -14,7 +14,7 @@ const Testimonials = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('reviews.json')
+        fetch('http://localhost:5000/review')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
@@ -33,7 +33,7 @@ const Testimonials = () => {
                         key={review._id}
                     >
                         <div className="lg:w-3/4 mx-auto flex flex-col items-center p-10 border">
-                            <img className="w-20 h-20 rounded-full" src={review.image} alt="" />
+                            <img className="w-20 h-20 rounded-full" src={review.userPhoto} alt="" />
                             <h3 className="text-2xl mt-2 text-orange-400">{review.name}</h3>
                             <p className="py-5 text-justify">{review.details}</p>
                             <Rating

@@ -16,6 +16,7 @@ import BookingForm from "../pages/BookingForm/BookingForm";
 import Booking from "../pages/Dashboard/Booking";
 import Cart from "../pages/Cart/Cart";
 import Order from "../pages/Dashboard/Order";
+import Review from "../pages/Dashboard/Review";
 
 
 const router = createBrowserRouter([
@@ -63,7 +64,7 @@ const router = createBrowserRouter([
         element: <Dashboard></Dashboard>,
         children: [
 
-            // user dashboard
+            // admin dashboard
             {
                 path: "adminHome",
                 element: <AdminHome></AdminHome>
@@ -81,7 +82,7 @@ const router = createBrowserRouter([
                 element: <AllUsers></AllUsers>
             },
 
-            // admin dashboard
+            // user dashboard
             {
                 path: "userHome",
                 element: <UserHome></UserHome>
@@ -90,6 +91,10 @@ const router = createBrowserRouter([
                 path: "cart",
                 element: <Cart></Cart>
             },
+            {
+                path: "review",
+                element: <Review></Review>
+            }
 
         ]
     }
