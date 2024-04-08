@@ -46,5 +46,53 @@
         "age": 12,
         "weight": 150,
         "category": "cow"
+    },
+    {
+        "title": "Country Goat",
+        "image": "https://i.ibb.co/prXhQtr/goat.jpg",
+        "price": 18000,
+        "age": 7,
+        "weight": 25,
+        "category": "goat"
+    },
+    {
+        "title": "Country Goat",
+        "image": "https://i.ibb.co/prXhQtr/goat.jpg",
+        "price": 18000,
+        "age": 7,
+        "weight": 25,
+        "category": "goat"
+    },
+    {
+        "title": "Country Goat",
+        "image": "https://i.ibb.co/prXhQtr/goat.jpg",
+        "price": 18000,
+        "age": 7,
+        "weight": 25,
+        "category": "goat"
+    },
+    {
+        "title": "Country Goat",
+        "image": "https://i.ibb.co/prXhQtr/goat.jpg",
+        "price": 18000,
+        "age": 7,
+        "weight": 25,
+        "category": "goat"
+    },
+    {
+        "title": "Country Goat",
+        "image": "https://i.ibb.co/prXhQtr/goat.jpg",
+        "price": 18000,
+        "age": 7,
+        "weight": 25,
+        "category": "goat"
+    },
+    {
+        "title": "Country Goat",
+        "image": "https://i.ibb.co/prXhQtr/goat.jpg",
+        "price": 18000,
+        "age": 7,
+        "weight": 25,
+        "category": "goat"
     }
 ]

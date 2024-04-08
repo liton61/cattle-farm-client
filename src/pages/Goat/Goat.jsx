@@ -6,10 +6,14 @@ import { Link } from "react-router-dom";
 const Goat = () => {
     const [goat, setGoat] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/goat')
+        fetch('http://localhost:5000/cattle')
             .then(res => res.json())
-            .then(data => setGoat(data))
-    }, [])
+            .then(data => {
+                const filteredData = data.filter(item => item.category === 'goat');
+                setGoat(filteredData);
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    }, [goat]);
     return (
         <div>
             <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/wdtm3NZ/Goat-Farming.jpg)' }}>

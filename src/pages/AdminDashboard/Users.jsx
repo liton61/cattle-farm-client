@@ -3,7 +3,7 @@ import useAxiosSecure from "../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 
 
-const AllUsers = () => {
+const Users = () => {
     const axiosSecure = useAxiosSecure();
     const { data: user = [], refetch } = useQuery({
         queryKey: ['user'],
@@ -92,4 +92,4 @@ const AllUsers = () => {
     );
 };
 
-export default AllUsers;
+export default Users;

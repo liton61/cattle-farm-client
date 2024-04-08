@@ -1,12 +1,12 @@
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../../hooks/useAdmin";
-import useCart from "../../hooks/useCart";
-import useBooking from "../../hooks/useBooking";
+// import useCart from "../../hooks/useCart";
+// import useBooking from "../../hooks/useBooking";
 
 
 const Dashboard = () => {
-    const [booking] = useBooking();
-    const [cart] = useCart();
+    // const [booking] = useBooking();
+    // const [cart] = useCart();
     const [isAdmin] = useAdmin();
     return (
         <div>
@@ -36,19 +36,19 @@ const Dashboard = () => {
                                                 to="/dashboard/booking"
                                                 className="hover:bg-transparent"
                                             >
-                                                <i className="fa-solid fa-calendar-days"></i>Booking
+                                                <i className="fa-solid fa-calendar-days"></i>Manage Booking
                                             </NavLink></li>
                                             <li className="font-medium mb-2"><NavLink
-                                                to="/dashboard/order"
+                                                to="/dashboard/cart"
                                                 className="hover:bg-transparent"
                                             >
-                                                <i className="fa-solid fa-shopping-basket"></i>Order
+                                                <i className="fa-solid fa-cart-plus"></i>Manage Cart
                                             </NavLink></li>
                                             <li className="font-medium mb-2"><NavLink
-                                                to="/dashboard/allUsers"
+                                                to="/dashboard/users"
                                                 className="hover:bg-transparent"
                                             >
-                                                <i className="fa-solid fa-users"></i> All Users
+                                                <i className="fa-solid fa-users"></i>Manage Users
                                             </NavLink></li>
                                         </>
                                         :
@@ -63,19 +63,19 @@ const Dashboard = () => {
                                                 to="/dashboard/myBooking"
                                                 className="hover:bg-transparent"
                                             >
-                                                <i className="fa-solid fa-calendar-days"></i>My Booking ({booking.length})
+                                                <i className="fa-solid fa-calendar-days"></i>My Booking
                                             </NavLink></li>
                                             <li className="font-medium mb-2"><NavLink
-                                                to="/dashboard/cart"
+                                                to="/dashboard/myCart"
                                                 className="hover:bg-transparent"
                                             >
-                                                <i className="fa-solid fa-cart-plus"></i> Cart ({cart.length})
+                                                <i className="fa-solid fa-cart-plus"></i>My Cart
                                             </NavLink></li>
                                             <li className="font-medium mb-2"><NavLink
                                                 to="/dashboard/review"
                                                 className="hover:bg-transparent"
                                             >
-                                                <i className="fa-solid fa-user-pen"></i> Review
+                                                <i className="fa-solid fa-user-pen"></i>Review
                                             </NavLink></li>
                                         </>
                                 }
@@ -107,10 +107,10 @@ const Dashboard = () => {
                                         <i className="fa-solid fa-house"></i>Admin Home
                                     </NavLink></li>
                                     <li className="font-medium mb-2"><NavLink
-                                        to="/dashboard/allUsers"
+                                        to="/dashboard/users"
                                         className="hover:bg-transparent"
                                     >
-                                        <i className="fa-solid fa-users"></i> All Users
+                                        <i className="fa-solid fa-users"></i>Manage Users
                                     </NavLink></li>
                                 </>
                                 :
@@ -125,7 +125,7 @@ const Dashboard = () => {
                                         to="/dashboard/review"
                                         className="hover:bg-transparent"
                                     >
-                                        <i className="fa-solid fa-user-pen"></i> Review
+                                        <i className="fa-solid fa-user-pen"></i>Review
                                     </NavLink></li>
                                 </>
                         }
@@ -134,7 +134,7 @@ const Dashboard = () => {
                             to="/"
                             className="hover:bg-transparent"
                         >
-                            <i className="fa-solid fa-house"></i> Home
+                            <i className="fa-solid fa-house"></i>Home
                         </NavLink></li>
                     </ul>
                 </div>

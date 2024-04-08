@@ -21,11 +21,7 @@ const Testimonials = () => {
 
     return (
         <section className="my-20 lg:w-3/4 mx-auto lg:px-0 px-5">
-            <div className='w-64 mx-auto my-10'>
-                <p className='text-[#FF3811] text-center font-semibold mb-2'>---What Our Clients Say---</p>
-                <h3 className='text-xl font-semibold border-y-4 text-center py-3'>TESTIMONIALS</h3>
-            </div>
-
+            <h2 className='text-3xl font-bold text-center text-green-900 mb-5 uppercase'>What Our Clients Say</h2>
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
 
                 {

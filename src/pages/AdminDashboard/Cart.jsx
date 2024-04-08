@@ -1,11 +1,17 @@
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
-import useCart from "../../hooks/useCart";
+import { useQuery } from "@tanstack/react-query";
 
 
-const Order = () => {
-    const [cart, refetch] = useCart();
+const Cart = () => {
     const axiosSecure = useAxiosSecure();
+    const { data: cart = [], refetch } = useQuery({
+        queryKey: ['cart'],
+        queryFn: async () => {
+            const res = await axiosSecure.get('/admin/cart');
+            return res.data;
+        }
+    })
 
     const handleDelete = id => {
         Swal.fire({
@@ -83,7 +89,7 @@ const Order = () => {
                     :
                     (
                         <div className="flex justify-center items-center h-screen">
-                            <p className="text-3xl font-bold">No Items Available</p>
+                            <p className="text-3xl font-bold">No Cart Available</p>
                         </div>
                     )
             }
@@ -91,4 +97,4 @@ const Order = () => {
     );
 };
 
-export default Order;
+export default Cart;

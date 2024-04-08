@@ -3,7 +3,6 @@ import { AuthContext } from "../../authentication/Provider/AuthProvider";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 
-
 const AdminHome = () => {
     const { user } = useContext(AuthContext);
     const axiosSecure = useAxiosSecure();
@@ -15,12 +14,13 @@ const AdminHome = () => {
             return res.data;
         }
     });
+
     return (
         <div>
             <h2 className="text-center text-3xl font-semibold mt-5">
                 <span>Hi, Welcome </span>
                 {
-                    user?.displayName ? user.displayName : 'Back'
+                    user?.displayName ? user?.displayName : 'Back'
                 }
             </h2>
             <div className="lg:px-20 px-5 mt-10">
@@ -37,12 +37,12 @@ const AdminHome = () => {
                     </div>
 
                     <div className="stat place-items-center">
-                        <div className="stat-title">Total Cow</div>
-                        <div className="stat-value text-secondary">{stats.cow}</div>
+                        <div className="stat-title">Total Cattle</div>
+                        <div className="stat-value text-secondary">{stats.cattle}</div>
                     </div>
                     <div className="stat place-items-center">
-                        <div className="stat-title">Total Goat</div>
-                        <div className="stat-value text-secondary">{stats.goat}</div>
+                        <div className="stat-title">Total Cart</div>
+                        <div className="stat-value text-secondary">{stats.cart}</div>
                     </div>
 
                     <div className="stat place-items-center">

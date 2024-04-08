@@ -8,16 +8,16 @@ import Cow from "../pages/Cow/Cow";
 import Goat from "../pages/Goat/Goat";
 import Shop from "../pages/Shop/Shop";
 import Dashboard from "../pages/Dashboard/Dashboard";
-import AdminHome from "../pages/Dashboard/AdminHome";
-import UserHome from "../pages/Dashboard/UserHome";
-import AllUsers from "../pages/Dashboard/AllUsers";
+import AdminHome from "../pages/AdminDashboard/AdminHome";
+import UserHome from "../pages/UserDashboard/UserHome";
 import Payment from "../pages/Payment/Payment";
 import BookingForm from "../pages/BookingForm/BookingForm";
-import Booking from "../pages/Dashboard/Booking";
-import Order from "../pages/Dashboard/Order";
-import Review from "../pages/Dashboard/Review";
-import MyBooking from "../pages/Dashboard/MyBooking";
-import Cart from "../pages/Dashboard/Cart";
+import Review from "../pages/UserDashboard/Review";
+import Users from "../pages/AdminDashboard/Users";
+import MyCart from "../pages/UserDashboard/MyCart";
+import Cart from "../pages/AdminDashboard/Cart";
+import MyBooking from "../pages/UserDashboard/MyBooking";
+import Booking from "../pages/AdminDashboard/Booking";
 
 
 const router = createBrowserRouter([
@@ -75,12 +75,12 @@ const router = createBrowserRouter([
                 element: <Booking></Booking>
             },
             {
-                path: "order",
-                element: <Order></Order>
+                path: "cart",
+                element: <Cart></Cart>
             },
             {
-                path: "allUsers",
-                element: <AllUsers></AllUsers>
+                path: "users",
+                element: <Users></Users>
             },
 
             // user dashboard
@@ -93,8 +93,8 @@ const router = createBrowserRouter([
                 element: <MyBooking></MyBooking>
             },
             {
-                path: "cart",
-                element: <Cart></Cart>
+                path: "myCart",
+                element: <MyCart></MyCart>
             },
             {
                 path: "review",
