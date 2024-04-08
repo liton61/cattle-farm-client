@@ -18,6 +18,7 @@ import MyCart from "../pages/UserDashboard/MyCart";
 import Cart from "../pages/AdminDashboard/Cart";
 import MyBooking from "../pages/UserDashboard/MyBooking";
 import Booking from "../pages/AdminDashboard/Booking";
+import AllPhotos from "../components/Gallery/AllPhotos";
 
 
 const router = createBrowserRouter([
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
             {
                 path: "/payment",
                 element: <Payment></Payment>
+            },
+            {
+                path: "/allPhotos",
+                element: <AllPhotos></AllPhotos>
             }
         ],
     },
