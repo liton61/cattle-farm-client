@@ -25,7 +25,7 @@ const Goat = () => {
             text: "Please login first!",
         });
     }
-    
+
     return (
         <div>
             <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/wdtm3NZ/Goat-Farming.jpg)' }}>

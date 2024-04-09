@@ -19,6 +19,8 @@ import Cart from "../pages/AdminDashboard/Cart";
 import MyBooking from "../pages/UserDashboard/MyBooking";
 import Booking from "../pages/AdminDashboard/Booking";
 import AllPhotos from "../components/Gallery/AllPhotos";
+import Blog from "../pages/Blog/Blog";
+import BlogDetails from "../pages/Blog/BlogDetails";
 
 
 const router = createBrowserRouter([
@@ -42,6 +44,15 @@ const router = createBrowserRouter([
             {
                 path: "/shop",
                 element: <Shop></Shop>
+            },
+            {
+                path: "/blog",
+                element: <Blog></Blog>
+            },
+            {
+                path: "/blogDetails/:id",
+                element: <BlogDetails></BlogDetails>,
+                loader: () => fetch('/blog.json')
             },
             {
                 path: "/bookingForm/:id",

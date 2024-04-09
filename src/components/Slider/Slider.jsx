@@ -14,8 +14,6 @@ import banner2 from '../../assets/slider (7).jpg';
 const Slider = () => {
     return (
         <div className='lg:w-3/4 mx-auto py-6 lg:px-0 px-5'>
-            <marquee>বাংলাদেশের মধ্যে সব থেকে বিশ্বাস যোগ্য গবাদি পশুর খামার</marquee>
-
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}

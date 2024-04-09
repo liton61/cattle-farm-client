@@ -1,9 +1,29 @@
 [
     {
-        "image": "https://i.ibb.co/ZgCrmYR/cow-5.jpg",
-        "title": "NATURAL LEADERS WHO & THRIVE AT INFLUENCING",
-        "date": "April 02,2024",
-        "admin": "John Doe",
-        "details": "coming soon..."
+        "_id": "1",
+        "title": "The Art of Cattle Breeding",
+        "author": "John Doe",
+        "author_photo": "https://i.ibb.co/ZXY2YKR/liton.jpg",
+        "date": "2024-04-02",
+        "content": "Cattle breeding is both a science and an art. In this post, we delve into the intricacies of selecting the right breeding stock, optimizing genetics, and nurturing healthy herds. Join us on a journey through the fascinating world of cattle genetics and reproduction.",
+        "image": "https://i.ibb.co/ZgCrmYR/cow-5.jpg"
+    },
+    {
+        "_id": "2",
+        "title": "Sustainable Practices for",
+        "author": "Jane Smith",
+        "author_photo": "https://i.ibb.co/ZXY2YKR/liton.jpg",
+        "date": "2024-04-07",
+        "content": "Grazing management plays a crucial role in maintaining healthy pastures and promoting sustainable agriculture. In this post, we explore best practices for rotational grazing, paddock design, and forage management. Learn how implementing these strategies can improve soil health, increase forage productivity, and enhance the well-being of your livestock.",
+        "image": "https://i.ibb.co/ZgCrmYR/cow-5.jpg"
+    },
+    {
+        "_id": "3",
+        "title": "The Benefits of Grass-Fed Beef",
+        "author": "Michael Johnson",
+        "author_photo": "https://i.ibb.co/ZXY2YKR/liton.jpg",
+        "date": "2024-04-05",
+        "content": "Grass-fed beef has gained popularity in recent years due to its superior taste and nutritional profile. In this post, we examine the environmental, health, and ethical benefits of raising cattle on pasture-based diets. Discover why grass-fed beef is not only delicious but also a more sustainable choice for consumers and producers alike.",
+        "image": "https://i.ibb.co/ZgCrmYR/cow-5.jpg"
     }
 ]
