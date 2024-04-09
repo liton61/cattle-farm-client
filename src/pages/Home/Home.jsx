@@ -8,8 +8,8 @@ import Slider from "../../components/Slider/Slider";
 import Team from "../../components/Team/Team";
 import Video from "../../components/Video/Video";
 import About from "../../components/About/About";
-import Appointment from "../../components/Appointment/Appointment";
 import Testimonials from "../../components/Testimonials/Testimonials";
+import Contact from "../../components/Contact/Contact";
 
 
 
@@ -25,7 +25,7 @@ const Home = () => {
             <Video></Video>
             <Brand></Brand>
             <Team></Team>
-            <Appointment></Appointment>
+            <Contact></Contact>
             <NewsFeed></NewsFeed>
             <Testimonials></Testimonials>
         </div>

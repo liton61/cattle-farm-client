@@ -1,9 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../authentication/Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const Cow = () => {
+    const { user } = useContext(AuthContext);
     const [cow, setCow] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/cattle')
@@ -14,6 +17,15 @@ const Cow = () => {
             })
             .catch(error => console.error('Error fetching data:', error));
     }, [cow]);
+
+    const handleErrorModal = () => {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Please login first!",
+        });
+    }
+
     return (
         <div>
             <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/KjSGr6V/hero-1.jpg)' }}>
@@ -35,9 +47,13 @@ const Cow = () => {
                             <p className="font-medium text-gray-600">Price : {cow.price} Tk</p>
                             <p className="font-medium text-gray-600">Age : {cow.age} Months Tk</p>
                             <div className="card-actions">
-                                <Link to={`/bookingForm/${cow._id}`} className="w-full">
-                                    <button className="btn bg-green-900 hover:bg-green-800 text-yellow-200 w-full uppercase">Book Now</button>
-                                </Link>
+                                {user && user.email ? (
+                                    <Link to={`/bookingForm/${cow._id}`} className="w-full">
+                                        <button className="btn bg-green-900 hover:bg-green-800 text-yellow-200 w-full uppercase">Book Now</button>
+                                    </Link>
+                                ) : (
+                                    <button onClick={handleErrorModal} className="btn bg-green-900 hover:bg-green-800 text-yellow-200 w-full uppercase">Book Now</button>
+                                )}
                             </div>
                         </div>
                     </div>))}

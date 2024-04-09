@@ -4,10 +4,10 @@ import sumon from '../../assets/sumon.png';
 
 const Team = () => {
     return (
-        <div className='lg:w-3/4 mx-auto lg:px-0 px-5 pt-16'>
-            <h1 className='text-3xl font-bold text-center pb-5 text-green-900'>Meet Our Team</h1>
+        <div className='lg:w-3/4 mx-auto lg:px-0 px-5 py-16'>
+            <h1 className='text-3xl font-bold text-center pb-5 text-green-900 uppercase'>Meet Our Team</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
-                <div className='bg-yellow-200 shadow-xl text-green-900 rounded'>
+                <div className='bg-yellow-200 text-green-900 rounded'>
                     <div className='flex justify-center pt-5'>
                         <img className='h-52 w-52 rounded-full border-dashed border-2 border-green-900' src={liton} alt="" />
                     </div>
@@ -21,7 +21,7 @@ const Team = () => {
                         <a href=''><i className="fa-brands fa-linkedin text-2xl"></i></a>
                     </div>
                 </div>
-                <div className='bg-yellow-200 shadow-xl text-green-900 rounded'>
+                <div className='bg-yellow-200 text-green-900 rounded'>
                     <div className='flex justify-center pt-5'>
                         <img className='h-52 w-52 rounded-full border-dashed border-2 border-green-900' src={lia} alt="" />
                     </div>
@@ -35,7 +35,7 @@ const Team = () => {
                         <a href=''><i className="fa-brands fa-linkedin text-2xl"></i></a>
                     </div>
                 </div>
-                <div className='bg-yellow-200 shadow-xl text-green-900 rounded'>
+                <div className='bg-yellow-200 text-green-900 rounded'>
                     <div className='flex justify-center pt-5'>
                         <img className='h-52 w-52 rounded-full border-dashed border-2 border-green-900' src={sumon} alt="" />
                     </div>
