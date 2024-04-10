@@ -50,12 +50,6 @@ const Navbar = () => {
                         >
                             Shop
                         </NavLink></li>
-                        <li><NavLink
-                            to="/blog"
-                            className="hover:bg-transparent"
-                        >
-                            Blog
-                        </NavLink></li>
                         {
                             user && isAdmin &&
                             <li><NavLink
@@ -108,12 +102,6 @@ const Navbar = () => {
                         className="hover:bg-transparent"
                     >
                         Shop
-                    </NavLink></li>
-                    <li className='font-medium'><NavLink
-                        to="/blog"
-                        className="hover:bg-transparent"
-                    >
-                        Blog
                     </NavLink></li>
                     {
                         user && isAdmin &&

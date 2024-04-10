@@ -19,8 +19,10 @@ import Cart from "../pages/AdminDashboard/Cart";
 import MyBooking from "../pages/UserDashboard/MyBooking";
 import Booking from "../pages/AdminDashboard/Booking";
 import AllPhotos from "../components/Gallery/AllPhotos";
-import Blog from "../pages/Blog/Blog";
-import BlogDetails from "../pages/Blog/BlogDetails";
+import Blog from "../components/Blog/Blog";
+import BlogDetails from "../components/Blog/BlogDetails";
+import PostBlog from "../pages/AdminDashboard/PostBlog";
+
 
 
 const router = createBrowserRouter([
@@ -93,6 +95,10 @@ const router = createBrowserRouter([
             {
                 path: "cart",
                 element: <Cart></Cart>
+            },
+            {
+                path: "postBlog",
+                element: <PostBlog></PostBlog>
             },
             {
                 path: "users",

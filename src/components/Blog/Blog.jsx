@@ -15,7 +15,9 @@ const Blog = () => {
     }, []);
 
     return (
-        <div className='lg:w-3/4 mx-auto lg:px-0 px-5 my-10'>
+        <div className='lg:w-3/4 mx-auto lg:px-0 px-5 py-16'>
+            <h5 className='text-center font-medium text-green-900'>News Feed</h5>
+            <h1 className='text-4xl font-bold text-center mb-10 text-green-900'>FARM BLOG & INSIGHTS</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {posts.map(post => (
                     <div key={post._id}>
@@ -25,10 +27,10 @@ const Blog = () => {
                                     <figure><img src={post.image} alt="" /></figure>
                                     <div className="card-body">
                                         <div className='flex justify-between'>
-                                            <span><i className="fa-solid fa-user text-green-900"></i> {post.author}</span>
-                                            <span><i className="fa-solid fa-calendar-days text-green-800"></i> {post.date}</span>
+                                            <span className='font-medium text-green-900'><i className="fa-solid fa-user text-green-900"></i> {post.author}</span>
+                                            <span className='font-medium text-green-900'><i className="fa-solid fa-calendar-days text-green-800"></i> {post.date}</span>
                                         </div>
-                                        <h2 className="card-title">{post.title}</h2>
+                                        <h2 className="card-title uppercase">{post.title}</h2>
                                         {/* <p>{post.content}</p> */}
                                     </div>
                                 </div>

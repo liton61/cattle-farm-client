@@ -45,6 +45,13 @@ const Dashboard = () => {
                                                 <i className="fa-solid fa-cart-plus"></i>Manage Cart
                                             </NavLink></li>
                                             <li className="font-medium mb-2"><NavLink
+                                                to="/dashboard/postBlog"
+                                                className="hover:bg-transparent"
+                                            >
+                                                <i className="fas fa-pencil-alt"></i>
+                                                Post Blog
+                                            </NavLink></li>
+                                            <li className="font-medium mb-2"><NavLink
                                                 to="/dashboard/users"
                                                 className="hover:bg-transparent"
                                             >

@@ -13,15 +13,12 @@ const BlogDetails = () => {
         setData(findData)
     }, [id, loadData])
     return (
-        <div className="lg:flex md:flex gap-20 lg:px-20 my-10">
-            <div className="lg:w-3/4 md:w-3/4 w-full border rounded p-10">
-                <img className="w-full h-80 rounded" src={data.image} alt="" />
+        <div className="lg:flex gap-20 lg:px-20 px-5 my-10">
+            <div className="lg:w-3/4 w-full border rounded p-5">
+                <img className="w-full rounded" src={data.image} alt="" />
                 <div className='flex justify-between mt-5'>
-                    <div className="flex items-center gap-2">
-                        <img className="w-10 h-10 rounded-full border border-green-700" src={data.author_photo} alt="" />
-                        <span className="font-medium text-green-900">{data.author}</span>
-                    </div>
-                    <span className="font-medium text-green-900"><i className="fa-solid fa-calendar-days text-green-800"></i> {data.date}</span>
+                    <span className="font-medium text-green-900"><i className="fa-solid fa-user text-green-800 mr-2"> </i>{data.author}</span>
+                    <span className="font-medium text-green-900"><i className="fa-solid fa-calendar-days text-green-800 mr-2"> </i>{data.date}</span>
                 </div>
                 <h1 className="text-3xl font-bold uppercase my-5">{data.title}</h1>
                 <p className="text-justify">{data.content}</p>
@@ -54,18 +51,16 @@ const BlogDetails = () => {
                         ></textarea>
                     </div>
                     <button className='btn bg-green-900 hover:bg-green-900 text-yellow-200 font-bold w-full rounded border-none uppercase'>
-                        Post Comment <i className="fa-solid fa-arrow-right text-yellow-200 font-bold"></i>
+                        Post Comment
                     </button>
                 </div>
             </div>
-            <div className="lg:w-1/3 md:w-1/3 w-full border rounded">
+            <div className="lg:w-1/3 w-full border rounded p-5 lg:mt-0 mt-10">
                 <div>
-                    <h2 className="uppercase text-center text-2xl font-bold mb-2">About Me</h2>
-                    <hr />
-                    <img className="w-32 h-32 mt-7 mx-auto rounded-full border border-green-700" src={admin} alt="" />
+                    <img className="w-32 h-32 mx-auto rounded-full border border-green-700" src={admin} alt="" />
                 </div>
                 <h1 className="text-center font-bold mt-3">Liton Mahmud</h1>
-                <p className="text-center">Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                <p className="text-justify">Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed do eiusmod tempor incididunt ut labore.orem ipsum dolor sit amet, consect etur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                 <div className="flex justify-center gap-10 mt-5">
                     <a href=''><i className="fa-brands fa-facebook text-2xl"></i></a>
                     <a href=''><i className="fa-brands fa-twitter text-2xl"></i></a>
