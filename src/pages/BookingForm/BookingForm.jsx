@@ -1,11 +1,15 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../authentication/Provider/AuthProvider";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams, useLoaderData } from "react-router-dom";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 
 
 const BookingForm = () => {
+    const [cattle, setCattle] = useState([]);
+    const { id } = useParams();
+    const loadData = useLoaderData();
+
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
 
@@ -41,6 +45,12 @@ const BookingForm = () => {
 
             })
     }
+
+    useEffect(() => {
+        const findData = loadData?.find(data => data._id === id);
+        setCattle(findData)
+    }, [id, loadData])
+
     return (
         <div className="lg:w-3/4 mx-auto lg:px-0 px-5 py-10">
             <form onSubmit={handleSubmit} className="p-10 shadow-md rounded">
@@ -67,25 +77,21 @@ const BookingForm = () => {
                 <div className="flex gap-5 mt-5">
                     <div className="w-full">
                         <label className=" font-bold text-md">Cattle Price</label>
-                        <input id="price" type="text" placeholder="Price" className="input input-bordered w-full focus:outline-none" required />
+                        <input id="price" type="text" placeholder="Price" defaultValue={cattle.price} className="input input-bordered w-full focus:outline-none" required />
                     </div>
                     <div className="w-full">
                         <label className=" font-bold text-md">Cattle weight</label>
-                        <input id="weight" type="text" placeholder="Weight" className="input input-bordered w-full focus:outline-none" required />
+                        <input id="weight" type="text" placeholder="Weight" defaultValue={cattle.weight} className="input input-bordered w-full focus:outline-none" required />
                     </div>
                 </div>
                 <div className="flex gap-5 mt-5">
                     <div className="w-full">
                         <label className=" font-bold text-md">Cattle Category</label>
-                        <select id="category" className="select select-bordered focus:outline-none w-full">
-                            <option disabled selected>Select</option>
-                            <option>Cow</option>
-                            <option>Goat</option>
-                        </select>
+                        <input id="category" type="text" placeholder="Category" defaultValue={cattle.category} className="input input-bordered w-full focus:outline-none" required />
                     </div>
                     <div className="w-full">
                         <label className=" font-bold text-md">Cattle Age</label>
-                        <input id="age" type="text" placeholder="Age" className="input input-bordered w-full focus:outline-none" required />
+                        <input id="age" type="text" placeholder="Age" defaultValue={cattle.age} className="input input-bordered w-full focus:outline-none" required />
                     </div>
                 </div>
                 <div className="w-full mt-5">

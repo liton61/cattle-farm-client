@@ -54,11 +54,12 @@ const router = createBrowserRouter([
             {
                 path: "/blogDetails/:id",
                 element: <BlogDetails></BlogDetails>,
-                loader: () => fetch('/blog.json')
+                loader: () => fetch('http://localhost:5000/blog')
             },
             {
                 path: "/bookingForm/:id",
-                element: <BookingForm></BookingForm>
+                element: <BookingForm></BookingForm>,
+                loader: () => fetch('http://localhost:5000/cattle')
             },
             {
                 path: "/payment",

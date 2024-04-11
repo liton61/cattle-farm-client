@@ -5,7 +5,7 @@ const Blog = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('blog.json')
+        fetch('http://localhost:5000/blog')
             .then(res => res.json())
             .then(data => {
                 // Sort posts by date in descending order

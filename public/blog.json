@@ -1,6 +1,5 @@
 [
     {
-        "_id": "1",
         "author": "John Doe",
         "title": "The Art of Cattle Breeding",
         "date": "2024-04-02",
@@ -8,7 +7,6 @@
         "content": "Cattle breeding is both a science and an art. In this post, we delve into the intricacies of selecting the right breeding stock, optimizing genetics, and nurturing healthy herds. Join us on a journey through the fascinating world of cattle genetics and reproduction."
     },
     {
-        "_id": "2",
         "author": "Jane Smith",
         "title": "Sustainable Practices for",
         "date": "2024-04-07",
@@ -16,7 +14,6 @@
         "content": "Grazing management plays a crucial role in maintaining healthy pastures and promoting sustainable agriculture. In this post, we explore best practices for rotational grazing, paddock design, and forage management. Learn how implementing these strategies can improve soil health, increase forage productivity, and enhance the well-being of your livestock."
     },
     {
-        "_id": "3",
         "author": "Michael Johnson",
         "title": "The Benefits of Grass-Fed",
         "date": "2024-04-05",
