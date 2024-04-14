@@ -23,15 +23,14 @@ const Blog = () => {
                     <div key={post._id}>
                         <div>
                             <Link to={`/blogDetails/${post._id}`}>
-                                <div className="card card-compact shadow-md rounded-none">
-                                    <figure><img src={post.image} alt="" /></figure>
+                                <div className="card card-compact shadow-md rounded-none h-80">
+                                    <figure><img className='h-48 w-full' src={post.image} alt="" /></figure>
                                     <div className="card-body">
                                         <div className='flex justify-between'>
                                             <span className='font-medium text-green-900'><i className="fa-solid fa-user text-green-900"></i> {post.author}</span>
                                             <span className='font-medium text-green-900'><i className="fa-solid fa-calendar-days text-green-800"></i> {post.date}</span>
                                         </div>
                                         <h2 className="card-title uppercase">{post.title}</h2>
-                                        {/* <p>{post.content}</p> */}
                                     </div>
                                 </div>
                             </Link>
