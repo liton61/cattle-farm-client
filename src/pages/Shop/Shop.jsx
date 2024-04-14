@@ -83,26 +83,12 @@ const Shop = () => {
             <div className='lg:w-3/4 mx-auto lg:px-0 px-5 py-10'>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
                     {shop.map(shop => (<div key={shop._id} className="card card-compact rounded border border-green-700">
-                        <figure><img className="h-36" src={shop.image} alt="" /></figure>
+                        <figure><img className="h-36 w-full" src={shop.image} alt="" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">{shop.title}</h2>
                             <p className="font-medium text-gray-600">Price : {shop.price} Tk</p>
                             <div className="card-actions justify-center">
                                 <button onClick={() => handleAddToCart(shop._id, shop.title, shop.price, shop.image)} className="bg-green-900 w-full p-3 rounded text-yellow-200 font-semibold"><i className="fa-solid fa-cart-plus"></i> Add to cart</button>
-
-                                {/* <button onClick={() => document.getElementById('my_modal_5').showModal()}><i className="fa-solid fa-eye text-xl text-green-700"></i></button> */}
-                                {/* <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-                                    <div className="modal-box">
-                                        <h3 className="font-bold text-lg">Hello!</h3>
-                                        <p className="py-4">Press ESC key or click the button below to close</p>
-                                        <div className="modal-action">
-                                            <form method="dialog">
-                                                <button className="btn">Close</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </dialog> */}
-                                {/* <button><i className="fa-solid fa-heart text-xl text-green-700"></i></button> */}
                             </div>
                         </div>
                     </div>))}

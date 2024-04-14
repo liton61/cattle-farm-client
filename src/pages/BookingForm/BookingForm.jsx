@@ -54,7 +54,7 @@ const BookingForm = () => {
     return (
         <div className="lg:w-3/4 mx-auto lg:px-0 px-5 py-10">
             <form onSubmit={handleSubmit} className="p-10 shadow-md rounded">
-                <div className="flex gap-5">
+                <div className="lg:flex gap-5">
                     <div className="w-full">
                         <label className=" font-bold text-md">Full Name</label>
                         <input id="name" type="text" placeholder="Name" defaultValue={user?.displayName} className="input input-bordered w-full focus:outline-none" required />
@@ -64,7 +64,7 @@ const BookingForm = () => {
                         <input id="email" type="text" placeholder="Email" defaultValue={user?.email} className="input input-bordered w-full focus:outline-none" required />
                     </div>
                 </div>
-                <div className="flex gap-5 mt-5">
+                <div className="lg:flex gap-5 mt-5">
                     <div className="w-full">
                         <label className=" font-bold text-md">Booking Date</label>
                         <input id="date" type="date" placeholder="Date" className="input input-bordered w-full focus:outline-none" required />
@@ -74,7 +74,7 @@ const BookingForm = () => {
                         <input id="phone" type="text" placeholder="Phone" className="input input-bordered w-full focus:outline-none" required />
                     </div>
                 </div>
-                <div className="flex gap-5 mt-5">
+                <div className="lg:flex gap-5 mt-5">
                     <div className="w-full">
                         <label className=" font-bold text-md">Cattle Price</label>
                         <input id="price" type="text" placeholder="Price" defaultValue={cattle.price} className="input input-bordered w-full focus:outline-none" required />
@@ -84,7 +84,7 @@ const BookingForm = () => {
                         <input id="weight" type="text" placeholder="Weight" defaultValue={cattle.weight} className="input input-bordered w-full focus:outline-none" required />
                     </div>
                 </div>
-                <div className="flex gap-5 mt-5">
+                <div className="lg:flex gap-5 mt-5">
                     <div className="w-full">
                         <label className=" font-bold text-md">Cattle Category</label>
                         <input id="category" type="text" placeholder="Category" defaultValue={cattle.category} className="input input-bordered w-full focus:outline-none" required />

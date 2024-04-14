@@ -45,11 +45,23 @@ const Dashboard = () => {
                                                 <i className="fa-solid fa-cart-plus"></i>Manage Cart
                                             </NavLink></li>
                                             <li className="font-medium mb-2"><NavLink
-                                                to="/dashboard/postBlog"
+                                                to="/dashboard/addCattle"
+                                                className="hover:bg-transparent"
+                                            >
+                                                <i className="fa-solid fa-plus"></i>Add Cattle
+                                            </NavLink></li>
+                                            <li className="font-medium mb-2"><NavLink
+                                                to="/dashboard/addItem"
+                                                className="hover:bg-transparent"
+                                            >
+                                                <i className="fa-solid fa-plus"></i>Add Item
+                                            </NavLink></li>
+                                            <li className="font-medium mb-2"><NavLink
+                                                to="/dashboard/writeBlog"
                                                 className="hover:bg-transparent"
                                             >
                                                 <i className="fas fa-pencil-alt"></i>
-                                                Post Blog
+                                                Write Blog
                                             </NavLink></li>
                                             <li className="font-medium mb-2"><NavLink
                                                 to="/dashboard/users"

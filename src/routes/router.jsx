@@ -21,7 +21,9 @@ import Booking from "../pages/AdminDashboard/Booking";
 import AllPhotos from "../components/Gallery/AllPhotos";
 import Blog from "../components/Blog/Blog";
 import BlogDetails from "../components/Blog/BlogDetails";
-import PostBlog from "../pages/AdminDashboard/PostBlog";
+import WriteBlog from "../pages/AdminDashboard/WriteBlog";
+import AddCattle from "../pages/AdminDashboard/AddCattle";
+import AddItem from "../pages/AdminDashboard/AddItem";
 
 
 
@@ -98,8 +100,16 @@ const router = createBrowserRouter([
                 element: <Cart></Cart>
             },
             {
-                path: "postBlog",
-                element: <PostBlog></PostBlog>
+                path: "addCattle",
+                element: <AddCattle></AddCattle>
+            },
+            {
+                path: "addItem",
+                element: <AddItem></AddItem>
+            },
+            {
+                path: "writeBlog",
+                element: <WriteBlog></WriteBlog>
             },
             {
                 path: "users",
