@@ -24,6 +24,8 @@ import BlogDetails from "../components/Blog/BlogDetails";
 import WriteBlog from "../pages/AdminDashboard/WriteBlog";
 import AddCattle from "../pages/AdminDashboard/AddCattle";
 import AddItem from "../pages/AdminDashboard/AddItem";
+import ManageCattle from "../pages/AdminDashboard/ManageCattle";
+import ManageShop from "../pages/AdminDashboard/ManageShop";
 
 
 
@@ -98,6 +100,14 @@ const router = createBrowserRouter([
             {
                 path: "cart",
                 element: <Cart></Cart>
+            },
+            {
+                path: "manageCattle",
+                element: <ManageCattle></ManageCattle>
+            },
+            {
+                path: "manageShop",
+                element: <ManageShop></ManageShop>
             },
             {
                 path: "addCattle",
