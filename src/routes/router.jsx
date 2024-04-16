@@ -60,12 +60,12 @@ const router = createBrowserRouter([
             {
                 path: "/blogDetails/:id",
                 element: <BlogDetails></BlogDetails>,
-                loader: () => fetch('http://localhost:5000/blog')
+                loader: () => fetch('https://cattle-farm-server.vercel.app/blog')
             },
             {
                 path: "/bookingForm/:id",
                 element: <BookingForm></BookingForm>,
-                loader: () => fetch('http://localhost:5000/cattle')
+                loader: () => fetch('https://cattle-farm-server.vercel.app/cattle')
             },
             {
                 path: "/payment",
@@ -110,7 +110,7 @@ const router = createBrowserRouter([
             {
                 path: "updateCattle/:id",
                 element: <UpdateCattle></UpdateCattle>,
-                loader: ({ params }) => fetch(`http://localhost:5000/cattle/${params.id}`)
+                loader: ({ params }) => fetch(`https://cattle-farm-server.vercel.app/cattle/${params.id}`)
             },
             {
                 path: "manageShop",
@@ -119,7 +119,7 @@ const router = createBrowserRouter([
             {
                 path: "updateShop/:id",
                 element: <UpdateShop></UpdateShop>,
-                loader: ({ params }) => fetch(`http://localhost:5000/shop/${params.id}`)
+                loader: ({ params }) => fetch(`https://cattle-farm-server.vercel.app/shop/${params.id}`)
             },
             {
                 path: "addCattle",

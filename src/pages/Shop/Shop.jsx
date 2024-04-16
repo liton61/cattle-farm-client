@@ -15,7 +15,7 @@ const Shop = () => {
 
     const [shop, setShop] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/shop')
+        fetch('https://cattle-farm-server.vercel.app/shop')
             .then(res => res.json())
             .then(data => setShop(data))
     }, [])

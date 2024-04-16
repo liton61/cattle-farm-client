@@ -86,7 +86,7 @@ const Cart = () => {
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td>{item.title}</td>
+                                                <td className="uppercase">{item.name}</td>
                                                 <td>${item.price}</td>
                                                 <td>
                                                     <button onClick={() => handleDelete(item._id)}><i className="fa-solid fa-trash-can text-xl text-red-600"></i></button>

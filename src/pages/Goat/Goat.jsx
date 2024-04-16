@@ -9,7 +9,7 @@ const Goat = () => {
     const { user } = useContext(AuthContext);
     const [goat, setGoat] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/cattle')
+        fetch('https://cattle-farm-server.vercel.app/cattle')
             .then(res => res.json())
             .then(data => {
                 const filteredData = data.filter(item => item.category === 'goat');

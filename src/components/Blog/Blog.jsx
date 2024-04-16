@@ -5,7 +5,7 @@ const Blog = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/blog')
+        fetch('https://cattle-farm-server.vercel.app/blog')
             .then(res => res.json())
             .then(data => {
                 // Sort posts by date in descending order

@@ -70,7 +70,7 @@ const Cart = () => {
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td>{item.title}</td>
+                                                <td>{item.name}</td>
                                                 <td>${item.price}</td>
                                                 <td>
                                                     <button>Confirm</button>
