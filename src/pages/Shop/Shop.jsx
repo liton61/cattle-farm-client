@@ -20,12 +20,12 @@ const Shop = () => {
             .then(data => setShop(data))
     }, [])
 
-    const handleAddToCart = (foodId, title, price, image) => {
+    const handleAddToCart = (foodId, name, price, image) => {
         if (user && user.email) {
             const cartItem = {
                 foodId: foodId,
                 email: user.email,
-                title: title,
+                name: name,
                 price: price,
                 image: image
             };
@@ -36,7 +36,7 @@ const Shop = () => {
                         Swal.fire({
                             position: "center",
                             icon: "success",
-                            title: `${title} successfully added `,
+                            title: `${name} successfully added `,
                             showConfirmButton: false,
                             timer: 2000
                         });
@@ -45,14 +45,6 @@ const Shop = () => {
                         navigate("/payment")
                     }
                 })
-                .catch(error => {
-                    console.error('Error adding item to cart:', error);
-                    Swal.fire({
-                        icon: "error",
-                        title: "Oops...",
-                        text: "An error occurred while adding item to cart.",
-                    });
-                });
         } else {
             Swal.fire({
                 icon: "error",
@@ -85,10 +77,10 @@ const Shop = () => {
                     {shop.map(shop => (<div key={shop._id} className="card card-compact rounded border border-green-700">
                         <figure><img className="h-36 w-full" src={shop.image} alt="" /></figure>
                         <div className="card-body">
-                            <h2 className="card-title">{shop.title}</h2>
+                            <h2 className="card-title">{shop.name}</h2>
                             <p className="font-medium text-gray-600">Price : {shop.price} Tk</p>
                             <div className="card-actions justify-center">
-                                <button onClick={() => handleAddToCart(shop._id, shop.title, shop.price, shop.image)} className="bg-green-900 w-full p-3 rounded text-yellow-200 font-semibold"><i className="fa-solid fa-cart-plus"></i> Add to cart</button>
+                                <button onClick={() => handleAddToCart(shop._id, shop.name, shop.price, shop.image)} className="bg-green-900 w-full p-3 rounded text-yellow-200 font-semibold"><i className="fa-solid fa-cart-plus"></i> Add to cart</button>
                             </div>
                         </div>
                     </div>))}
