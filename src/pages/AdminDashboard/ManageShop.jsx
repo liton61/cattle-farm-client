@@ -73,7 +73,7 @@ const ManageShop = () => {
                                             <td>{data.name}</td>
                                             <td>{data.price} Tk</td>
                                             <td className="flex justify-between">
-                                            <Link to={`/dashboard/updateShop/${data._id}`}>
+                                                <Link to={`/dashboard/updateShop/${data._id}`}>
                                                     <button><i className="fa-solid fa-pen-to-square text-xl text-green-600"></i></button>
                                                 </Link>
                                                 <button onClick={() => handleDeleteUser(data)}><i className="fa-solid fa-trash-can text-xl text-red-600"></i></button>

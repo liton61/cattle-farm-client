@@ -57,12 +57,12 @@ const Shop = () => {
     return (
         <div>
             <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/vd5Rgrp/service-01.jpg)' }}>
-                <div className="hero-content text-center text-neutral-content">
+                {/* <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md bg-black bg-opacity-50 lg:p-10 md:p-10 p-3 rounded">
                         <h1 className="mb-5 text-4xl font-bold">HAPPY SHOPPING</h1>
                         <p className="mb-5 text-yellow-200">Farming is not just a livelihood, it's a legacy we sow today for future generations to reap !!!</p>
                     </div>
-                </div>
+                </div> */}
             </div>
             <div className="lg:w-3/4 mx-auto lg:px-0 px-5 py-10">
                 <div className="bg-orange-400 py-10 flex justify-center items-center bg-cover" style={{ backgroundImage: 'url(https://i.ibb.co/Ksm5sRz/bg.jpg)' }}>
@@ -77,7 +77,7 @@ const Shop = () => {
                     {shop.map(shop => (<div key={shop._id} className="card card-compact rounded border border-green-700">
                         <figure><img className="h-36 w-full" src={shop.image} alt="" /></figure>
                         <div className="card-body">
-                            <h2 className="card-title">{shop.name}</h2>
+                            <h2 className="card-title uppercase">{shop.name}</h2>
                             <p className="font-medium text-gray-600">Price : {shop.price} Tk</p>
                             <div className="card-actions justify-center">
                                 <button onClick={() => handleAddToCart(shop._id, shop.name, shop.price, shop.image)} className="bg-green-900 w-full p-3 rounded text-yellow-200 font-semibold"><i className="fa-solid fa-cart-plus"></i> Add to cart</button>

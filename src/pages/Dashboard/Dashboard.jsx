@@ -126,6 +126,37 @@ const Dashboard = () => {
                                         <i className="fa-solid fa-house"></i>Admin Home
                                     </NavLink></li>
                                     <li className="font-medium mb-2"><NavLink
+                                        to="/dashboard/booking"
+                                        className="hover:bg-transparent"
+                                    >
+                                        <i className="fa-solid fa-calendar-days"></i>Manage Booking
+                                    </NavLink></li>
+                                    <li className="font-medium mb-2"><NavLink
+                                        to="/dashboard/cart"
+                                        className="hover:bg-transparent"
+                                    >
+                                        <i className="fa-solid fa-cart-plus"></i>Manage Cart
+                                    </NavLink></li>
+                                    <li className="font-medium mb-2"><NavLink
+                                        to="/dashboard/manageCattle"
+                                        className="hover:bg-transparent"
+                                    >
+                                        <i className="fa-solid fa-cow"></i>Manage Cattle
+                                    </NavLink></li>
+                                    <li className="font-medium mb-2"><NavLink
+                                        to="/dashboard/manageShop"
+                                        className="hover:bg-transparent"
+                                    >
+                                        <i className="fa-solid fa-shop"></i>Manage Shop
+                                    </NavLink></li>
+                                    <li className="font-medium mb-2"><NavLink
+                                        to="/dashboard/writeBlog"
+                                        className="hover:bg-transparent"
+                                    >
+                                        <i className="fas fa-pencil-alt"></i>
+                                        Write Blog
+                                    </NavLink></li>
+                                    <li className="font-medium mb-2"><NavLink
                                         to="/dashboard/users"
                                         className="hover:bg-transparent"
                                     >
@@ -139,6 +170,18 @@ const Dashboard = () => {
                                         className="hover:bg-transparent"
                                     >
                                         <i className="fa-solid fa-house"></i>User Home
+                                    </NavLink></li>
+                                    <li className="font-medium mb-2"><NavLink
+                                        to="/dashboard/myBooking"
+                                        className="hover:bg-transparent"
+                                    >
+                                        <i className="fa-solid fa-calendar-days"></i>My Booking
+                                    </NavLink></li>
+                                    <li className="font-medium mb-2"><NavLink
+                                        to="/dashboard/myCart"
+                                        className="hover:bg-transparent"
+                                    >
+                                        <i className="fa-solid fa-cart-plus"></i>My Cart
                                     </NavLink></li>
                                     <li className="font-medium mb-2"><NavLink
                                         to="/dashboard/review"

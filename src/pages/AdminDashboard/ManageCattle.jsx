@@ -1,11 +1,17 @@
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
-import useCattle from "../../hooks/useCattle";
+import { useQuery } from "@tanstack/react-query";
 
 const ManageCattle = () => {
     const axiosSecure = useAxiosSecure();
-    const [cattle, refetch] = useCattle();
+    const { data: cattle = [], refetch } = useQuery({
+        queryKey: ['cattle'],
+        queryFn: async () => {
+            const res = await axiosSecure.get('/cattle');
+            return res.data;
+        }
+    })
 
     const handleDeleteUser = data => {
         Swal.fire({

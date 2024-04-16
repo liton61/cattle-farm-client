@@ -23,7 +23,7 @@ const Contact = () => {
 
     return (
         <div className="lg:w-3/4 mx-auto my-16 lg:px-0 px-5">
-            <p className="font-medium text-yellow-200 text-center">Customer Request</p>
+            <p className="font-medium text-green-900 text-center">Customer Request</p>
             <h1 className="text-4xl font-bold text-green-900 text-center mb-5">BOOK AN APPOINTMENT</h1>
             <div className="bg-green-900 lg:p-10 p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
                 <form ref={form} onSubmit={sendEmail}>

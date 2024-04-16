@@ -14,7 +14,7 @@ const AddItem = () => {
         let imageUrl;
 
         const formData = new FormData();
-        const title = form.title.value;
+        const name = form.name.value;
         const price = parseFloat(form.price.value);
         const image = form.image.files[0];
         formData.append('image', image);
@@ -23,7 +23,7 @@ const AddItem = () => {
         const response = await Axios.post(image_hosting_api, formData);
         imageUrl = response.data.data.url;
 
-        const cattleData = { image: imageUrl, title, price };
+        const cattleData = { image: imageUrl, name, price };
         // console.log('cattleData', cattleData)
 
         axios.post('/shop', cattleData)
@@ -32,7 +32,7 @@ const AddItem = () => {
                 Swal.fire({
                     icon: 'success',
                     title: 'Success!',
-                    text: 'Item has been added !',
+                    text: `${name} has been added !`,
                 });
                 form.reset();
             })
@@ -42,8 +42,8 @@ const AddItem = () => {
             <form onSubmit={handleAdd} className="p-10 shadow-md rounded">
                 <div className="lg:flex gap-5">
                     <div className="w-full">
-                        <label className=" font-bold text-md">Title</label>
-                        <input id="title" type="text" placeholder="Title" className="input input-bordered w-full focus:outline-none" required />
+                        <label className=" font-bold text-md">Name</label>
+                        <input id="name" type="text" placeholder="Name" className="input input-bordered w-full focus:outline-none" required />
                     </div>
                     <div className="w-full">
                         <label className=" font-bold text-md">Cattle Price</label>
