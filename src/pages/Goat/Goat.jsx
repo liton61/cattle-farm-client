@@ -41,7 +41,7 @@ const Goat = () => {
                     {goat.map(goat => (<div key={goat._id} className="card card-compact border border-green-700 rounded">
                         <figure><img className="h-52 w-full" src={goat.image} alt="" /></figure>
                         <div className="card-body">
-                            <h2 className="card-title">{goat.title}
+                            <h2 className="card-title">{goat.origin}
                                 <div className="badge badge-secondary">Weight : {goat.weight} Kg</div>
                             </h2>
                             <p className="font-medium text-gray-600">Price : {goat.price} Tk</p>

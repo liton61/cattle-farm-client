@@ -26,6 +26,7 @@ import AddCattle from "../pages/AdminDashboard/AddCattle";
 import AddItem from "../pages/AdminDashboard/AddItem";
 import ManageCattle from "../pages/AdminDashboard/ManageCattle";
 import ManageShop from "../pages/AdminDashboard/ManageShop";
+import UpdateCattle from "../pages/AdminDashboard/UpdateCattle";
 
 
 
@@ -104,6 +105,12 @@ const router = createBrowserRouter([
             {
                 path: "manageCattle",
                 element: <ManageCattle></ManageCattle>
+            },
+            {
+                path: "updateCattle/:id",
+                element: <UpdateCattle></UpdateCattle>,
+                // loader: () => fetch('http://localhost:5000/cattle')
+                loader: ({ params }) => fetch(`http://localhost:5000/cattle/${params.id}`)
             },
             {
                 path: "manageShop",

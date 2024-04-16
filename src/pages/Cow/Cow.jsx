@@ -41,7 +41,7 @@ const Cow = () => {
                     {cow.map(cow => (<div key={cow._id} className="card card-compact border border-green-700 rounded">
                         <figure><img className="h-52 w-full" src={cow.image} alt="" /></figure>
                         <div className="card-body">
-                            <h2 className="card-title">{cow.title}
+                            <h2 className="card-title">{cow.origin}
                                 <div className="badge badge-secondary">Weight : {cow.weight} Kg</div>
                             </h2>
                             <p className="font-medium text-gray-600">Price : {cow.price} Tk</p>

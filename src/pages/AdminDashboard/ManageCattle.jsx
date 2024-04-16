@@ -1,17 +1,11 @@
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
-import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
+import useCattle from "../../hooks/useCattle";
 
 const ManageCattle = () => {
     const axiosSecure = useAxiosSecure();
-    const { data: cattle = [], refetch } = useQuery({
-        queryKey: ['cattle'],
-        queryFn: async () => {
-            const res = await axiosSecure.get('/cattle');
-            return res.data;
-        }
-    })
+    const [cattle, refetch] = useCattle();
 
     const handleDeleteUser = data => {
         Swal.fire({
@@ -79,7 +73,9 @@ const ManageCattle = () => {
                                             <td>{data.age} Months</td>
                                             <td>{data.category}</td>
                                             <td className="flex justify-between">
-                                                <button><i className="fa-solid fa-pen-to-square text-xl text-green-600"></i></button>
+                                                <Link to={`/dashboard/updateCattle/${data._id}`}>
+                                                    <button><i className="fa-solid fa-pen-to-square text-xl text-green-600"></i></button>
+                                                </Link>
                                                 <button onClick={() => handleDeleteUser(data)}><i className="fa-solid fa-trash-can text-xl text-red-600"></i></button>
                                             </td>
                                         </tr>)
