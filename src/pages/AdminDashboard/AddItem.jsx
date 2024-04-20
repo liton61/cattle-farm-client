@@ -39,13 +39,13 @@ const AddItem = () => {
     }
     return (
         <div className="lg:w-3/4 mx-auto lg:px-0 px-5 py-10">
-            <form onSubmit={handleAdd} className="p-10 shadow-md rounded">
+            <form onSubmit={handleAdd} className="lg:p-10 md:p-10 p-5 shadow-md rounded">
                 <div className="lg:flex gap-5">
-                    <div className="w-full">
+                    <div className="w-full mt-5">
                         <label className=" font-bold text-md">Name</label>
                         <input id="name" type="text" placeholder="Name" className="input input-bordered w-full focus:outline-none" required />
                     </div>
-                    <div className="w-full">
+                    <div className="w-full mt-5">
                         <label className=" font-bold text-md">Cattle Price</label>
                         <input id="price" type="text" placeholder="Price" className="input input-bordered w-full focus:outline-none" required />
                     </div>

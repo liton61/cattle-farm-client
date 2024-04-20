@@ -53,7 +53,7 @@ const Cart = () => {
                                             <th>Image</th>
                                             <th>Name</th>
                                             <th>Price</th>
-                                            <th>Status</th>
+                                            {/* <th>Status</th> */}
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -72,9 +72,9 @@ const Cart = () => {
                                                 </td>
                                                 <td>{item.name}</td>
                                                 <td>${item.price}</td>
-                                                <td>
+                                                {/* <td>
                                                     <button>Confirm</button>
-                                                </td>
+                                                </td> */}
                                                 <td>
                                                     <button onClick={() => handleDelete(item._id)}><i className="fa-solid fa-trash-can text-xl text-red-600"></i></button>
                                                 </td>

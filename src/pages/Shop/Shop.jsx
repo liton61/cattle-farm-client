@@ -64,14 +64,6 @@ const Shop = () => {
                     </div>
                 </div> */}
             </div>
-            <div className="lg:w-3/4 mx-auto lg:px-0 px-5 py-10">
-                <div className="bg-orange-400 py-10 flex justify-center items-center bg-cover" style={{ backgroundImage: 'url(https://i.ibb.co/Ksm5sRz/bg.jpg)' }}>
-                    <div className="join">
-                        <input className="input input-bordered focus:outline-none join-item" placeholder="Search Your Product" />
-                        <button className="btn bg-green-900 hover:bg-green-800 text-yellow-200 join-item">Search <i className="fa-solid fa-magnifying-glass"></i></button>
-                    </div>
-                </div>
-            </div>
             <div className='lg:w-3/4 mx-auto lg:px-0 px-5 py-10'>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
                     {shop.map(shop => (<div key={shop._id} className="card card-compact rounded border border-green-700">

@@ -1,9 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams, useLoaderData } from "react-router-dom";
 import admin from '../../assets/liton.jpg';
+import { AuthContext } from "../../authentication/Provider/AuthProvider";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
+import Swal from "sweetalert2";
 
 
 const BlogDetails = () => {
+    const { user } = useContext(AuthContext);
+    const axiosSecure = useAxiosSecure();
     const [data, setData] = useState([]);
     const { id } = useParams();
     const loadData = useLoaderData();
@@ -12,6 +17,31 @@ const BlogDetails = () => {
         const findData = loadData?.find(details => details._id === id);
         setData(findData)
     }, [id, loadData])
+
+    const handleComment = e => {
+        e.preventDefault();
+        const form = e.target;
+        const comment = form.comment.value;
+        const userName = user.displayName;
+        const userEmail = user.email;
+        const userPhoto = user.photoURL;
+
+        const userComment = { comment, userName, userEmail, userPhoto };
+        // console.log(userComment);
+
+        axiosSecure.post('/comment', userComment)
+            .then(res => {
+                console.log(res);
+                if (res.data.insertedId) {
+                    Swal.fire({
+                        title: "Good job !",
+                        text: "Comment successfully added !",
+                        icon: "success"
+                    });
+                }
+                form.reset();
+            })
+    }
     return (
         <div className="lg:flex gap-20 lg:px-20 px-5 my-10">
             <div className="lg:w-3/4 w-full border rounded p-5">
@@ -22,38 +52,20 @@ const BlogDetails = () => {
                 </div>
                 <h1 className="text-3xl font-bold uppercase my-5">{data.title}</h1>
                 <p className="text-justify">{data.content}</p>
-                <div className="bg-base-200 p-10 mt-10">
-                    <div className="mb-4">
-                        <input
-                            type="text"
-                            id="name"
-                            name="user_name"
-                            className="w-full px-4 py-2 rounded text-black focus:outline-none border"
-                            required placeholder='Your Name'
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <input
-                            type="email"
-                            id="email"
-                            name="user_email"
-                            className="w-full px-4 py-2 rounded text-black focus:outline-none border"
-                            required placeholder='Your Email'
-                        />
-                    </div>
+                <form onSubmit={handleComment} className="bg-base-200 p-10 mt-10">
                     <div className="mb-4">
                         <textarea
-                            id="message"
-                            name="message"
+                            id="comment"
+                            name="comment"
                             className="w-full px-4 py-2 rounded text-black focus:outline-none border"
                             rows="5"
-                            required placeholder='Message'
+                            required placeholder='Comment'
                         ></textarea>
                     </div>
                     <button className='btn bg-green-900 hover:bg-green-900 text-yellow-200 font-bold w-full rounded border-none uppercase'>
                         Post Comment
                     </button>
-                </div>
+                </form>
             </div>
             <div className="lg:w-1/3 w-full border rounded p-5 lg:mt-0 mt-10">
                 <div>

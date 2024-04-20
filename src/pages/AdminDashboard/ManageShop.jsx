@@ -72,7 +72,7 @@ const ManageShop = () => {
                                             <td><img className="w-12 h-12 rounded-full" src={data.image} alt="" /></td>
                                             <td className="uppercase">{data.name}</td>
                                             <td>{data.price} Tk</td>
-                                            <td className="flex justify-between">
+                                            <td className="flex gap-5">
                                                 <Link to={`/dashboard/updateShop/${data._id}`}>
                                                     <button><i className="fa-solid fa-pen-to-square text-xl text-green-600"></i></button>
                                                 </Link>
