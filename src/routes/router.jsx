@@ -68,10 +68,6 @@ const router = createBrowserRouter([
                 loader: () => fetch('https://cattle-farm-server.vercel.app/cattle')
             },
             {
-                path: "/payment",
-                element: <Payment></Payment>
-            },
-            {
                 path: "/allPhotos",
                 element: <AllPhotos></AllPhotos>
             }
@@ -84,6 +80,10 @@ const router = createBrowserRouter([
     {
         path: "/register",
         element: <Register></Register>
+    },
+    {
+        path: "/payment",
+        element: <Payment></Payment>
     },
     {
         path: "dashboard",
