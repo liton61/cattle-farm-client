@@ -72,7 +72,7 @@ const ManageCattle = () => {
                                     {
                                         cattle.map((data, index) => <tr key={data._id}>
                                             <th>{index + 1}</th>
-                                            <td><img className="w-12 h-12 rounded-full" src={data.image} alt="" /></td>
+                                            <td><img className="lg:w-12 md:w-12 lg:h-12 md:h-12 w-9 h-9 rounded-full" src={data.image} alt="" /></td>
                                             <td>{data.origin}</td>
                                             <td>{data.price} Tk</td>
                                             <td>{data.weight} Kg</td>

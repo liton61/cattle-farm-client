@@ -81,7 +81,9 @@ const Users = () => {
                                         <i className="fa-solid fa-users text-xl text-green-600"></i>
                                     </button>}
                                 </td>
-                                <button onClick={() => handleDeleteUser(user)}><i className="fa-solid fa-trash-can text-xl text-red-600 mt-3"></i></button>
+                                <td>
+                                    <button onClick={() => handleDeleteUser(user)}><i className="fa-solid fa-trash-can text-xl text-red-600 mt-3"></i></button>
+                                </td>
                             </tr>)
                         }
 
