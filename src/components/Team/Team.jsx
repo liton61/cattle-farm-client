@@ -1,6 +1,6 @@
-import liton from '../../assets/liton.jpg';
-import lia from '../../assets/lia.jpg';
-import sumon from '../../assets/sumon.png';
+import team1 from '../../assets/liton.jpg';
+import team2 from '../../assets/team (3).jpg';
+import team3 from '../../assets/sumon.png';
 
 const Team = () => {
     return (
@@ -9,7 +9,7 @@ const Team = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 <div className='bg-yellow-200 text-green-900 rounded'>
                     <div className='flex justify-center pt-5'>
-                        <img className='h-52 w-52 rounded-full border-dashed border-2 border-green-900' src={liton} alt="" />
+                        <img className='h-52 w-52 rounded-full border-dashed border-2 border-green-900' src={team1} alt="" />
                     </div>
                     <div className='py-5'>
                         <h3 className='text-2xl font-bold text-center'>Liton Mahmud</h3>
@@ -23,11 +23,11 @@ const Team = () => {
                 </div>
                 <div className='bg-yellow-200 text-green-900 rounded'>
                     <div className='flex justify-center pt-5'>
-                        <img className='h-52 w-52 rounded-full border-dashed border-2 border-green-900' src={lia} alt="" />
+                        <img className='h-52 w-52 rounded-full border-dashed border-2 border-green-900' src={team2} alt="" />
                     </div>
                     <div className='py-5'>
-                        <h3 className='text-2xl font-bold text-center'>Lia Mahmud</h3>
-                        <h5 className='text-center font-medium text-sm'>Advisor</h5>
+                        <h3 className='text-2xl font-bold text-center'>Rohan Prvej</h3>
+                        <h5 className='text-center font-medium text-sm'>Co-Founder</h5>
                     </div>
                     <div className="flex justify-center gap-10 pb-5">
                         <a href=''><i className="fa-brands fa-facebook text-2xl"></i></a>
@@ -37,7 +37,7 @@ const Team = () => {
                 </div>
                 <div className='bg-yellow-200 text-green-900 rounded'>
                     <div className='flex justify-center pt-5'>
-                        <img className='h-52 w-52 rounded-full border-dashed border-2 border-green-900' src={sumon} alt="" />
+                        <img className='h-52 w-52 rounded-full border-dashed border-2 border-green-900' src={team3} alt="" />
                     </div>
                     <div className='py-5'>
                         <h3 className='text-2xl font-bold text-center'>Sumon Ismail</h3>

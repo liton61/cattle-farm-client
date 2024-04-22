@@ -4,7 +4,7 @@ import Gallery from "../../components/Gallery/Gallery";
 import Product from "../../components/Product/Product";
 import Service from "../../components/Service/Service";
 import Slider from "../../components/Slider/Slider";
-// import Team from "../../components/Team/Team";
+import Team from "../../components/Team/Team";
 import Video from "../../components/Video/Video";
 import About from "../../components/About/About";
 import Testimonials from "../../components/Testimonials/Testimonials";
@@ -24,7 +24,7 @@ const Home = () => {
             <Gallery></Gallery>
             <Video></Video>
             <Brand></Brand>
-            {/* <Team></Team> */}
+            <Team></Team>
             <Contact></Contact>
             <Blog></Blog>
             <Testimonials></Testimonials>
