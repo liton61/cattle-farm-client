@@ -57,7 +57,7 @@ const Review = () => {
                             <textarea id="detail" name="details" rows="4" className="form-textarea mt-1 w-full rounded focus:outline-none p-2"></textarea>
                         </div>
                         <div>
-                            <button className="btn btn-success font-bold w-full uppercase text-base-200">Submit Review</button>
+                            <button className="btn btn-success w-full uppercase">Submit Review</button>
                         </div>
                     </form>
                 </div>

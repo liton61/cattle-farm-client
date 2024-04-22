@@ -41,7 +41,7 @@ const PostBlog = () => {
     }
     return (
         <div className="lg:w-3/4 mx-auto lg:px-0 px-5 my-10">
-            <div className="bg-base-200 p-10">
+            <div className="bg-base-200 lg:p-10 md:p-10 p-5">
                 <form onSubmit={handleUpload}>
                     <div className="mb-4">
                         <input
@@ -78,7 +78,7 @@ const PostBlog = () => {
                             required placeholder='Content'
                         ></textarea>
                     </div>
-                    <button className='btn btn-success font-bold w-full rounded border-none uppercase'>Post Blog</button>
+                    <button className='btn btn-success w-full rounded border-none uppercase'>Post Blog</button>
                 </form>
             </div>
         </div>

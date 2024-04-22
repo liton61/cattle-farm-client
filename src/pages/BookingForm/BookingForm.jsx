@@ -53,43 +53,43 @@ const BookingForm = () => {
 
     return (
         <div className="lg:w-3/4 mx-auto lg:px-0 px-5 py-10">
-            <form onSubmit={handleSubmit} className="p-10 shadow-md rounded">
+            <form onSubmit={handleSubmit} className="lg:p-10 md:p-10 p-5 shadow-md rounded">
                 <div className="lg:flex gap-5">
-                    <div className="w-full">
+                    <div className="w-full mt-5">
                         <label className=" font-bold text-md">Full Name</label>
                         <input id="name" type="text" placeholder="Name" defaultValue={user?.displayName} className="input input-bordered w-full focus:outline-none" required />
                     </div>
-                    <div className="w-full">
+                    <div className="w-full mt-5">
                         <label className=" font-bold text-md">Email Address</label>
                         <input id="email" type="text" placeholder="Email" defaultValue={user?.email} className="input input-bordered w-full focus:outline-none" required />
                     </div>
                 </div>
-                <div className="lg:flex gap-5 mt-5">
-                    <div className="w-full">
+                <div className="lg:flex gap-5">
+                    <div className="w-full mt-5">
                         <label className=" font-bold text-md">Booking Date</label>
                         <input id="date" type="date" placeholder="Date" className="input input-bordered w-full focus:outline-none" required />
                     </div>
-                    <div className="w-full">
+                    <div className="w-full mt-5">
                         <label className=" font-bold text-md">Phone Number</label>
                         <input id="phone" type="text" placeholder="Phone" className="input input-bordered w-full focus:outline-none" required />
                     </div>
                 </div>
-                <div className="lg:flex gap-5 mt-5">
-                    <div className="w-full">
+                <div className="lg:flex gap-5">
+                    <div className="w-full mt-5">
                         <label className=" font-bold text-md">Cattle Price</label>
                         <input id="price" type="text" placeholder="Price" defaultValue={cattle.price} className="input input-bordered w-full focus:outline-none" required />
                     </div>
-                    <div className="w-full">
+                    <div className="w-full mt-5">
                         <label className=" font-bold text-md">Cattle weight</label>
                         <input id="weight" type="text" placeholder="Weight" defaultValue={cattle.weight} className="input input-bordered w-full focus:outline-none" required />
                     </div>
                 </div>
-                <div className="lg:flex gap-5 mt-5">
-                    <div className="w-full">
+                <div className="lg:flex gap-5">
+                    <div className="w-full mt-5">
                         <label className=" font-bold text-md">Cattle Category</label>
                         <input id="category" type="text" placeholder="Category" defaultValue={cattle.category} className="input input-bordered w-full focus:outline-none" required />
                     </div>
-                    <div className="w-full">
+                    <div className="w-full mt-5">
                         <label className=" font-bold text-md">Cattle Age</label>
                         <input id="age" type="text" placeholder="Age" defaultValue={cattle.age} className="input input-bordered w-full focus:outline-none" required />
                     </div>
